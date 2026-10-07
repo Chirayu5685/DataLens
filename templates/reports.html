@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","surface-dim":"#0b1326","surface":"#0b1326","inverse-surface":"#dae2fd","primary-fixed":"#dbe1ff","secondary-container":"#03b5d3","surface-container-highest":"#2d3449","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","surface-tint":"#b4c5ff","on-error-container":"#ffdad6","on-surface":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-surface-variant":"#c3c6d7","on-primary-fixed":"#00174b","primary-container":"#2563eb","secondary-fixed-dim":"#4cd7f6","on-tertiary-fixed":"#23005c","secondary-fixed":"#acedff","surface-bright":"#31394d","on-primary-container":"#eeefff","on-secondary":"#003640","on-tertiary":"#3c0091","on-secondary-fixed-variant":"#004e5c","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#5516be","tertiary":"#d0bcff","surface-container-high":"#222a3d","secondary":"#4cd7f6","on-tertiary-container":"#f6edff","tertiary-fixed-dim":"#d0bcff","on-secondary-fixed":"#001f26","inverse-primary":"#0053db","on-error":"#690005","primary":"#b4c5ff","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#e9ddff","outline-variant":"#434655","background":"#0b1326","on-primary":"#002a78","surface-container-low":"#131b2e","surface-container":"#171f33","error":"#ffb4ab","tertiary-container":"#7d4ce7","surface-variant":"#2d3449","on-background":"#dae2fd","outline":"#8d90a0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","gutter-mobile":"0.75rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"metric-display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md pt-space-lg"><div class="flex items-center gap-space-sm px-space-xs mb-space-lg"><img alt="DataLens Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xep2HctBICippvpUkI3qxHFL9w3Df87DJYU872w88nlF7WmhaDLyiBqYI5GyZNfWwD4Bivxu6qFr2klk3fItDEs6TL2WR88hO6WL8d_JotXXDmefXWb0Fwk15zCgQY1m2UZBJBl1gQMQgAQ2lng5pkl94JrXTc1ACIGIME2mtvDQaXScjCJxEM1gcXpy1RLviV10UKONrMDmq2mePVkeYhzNedy_ITBK9txfDxLWegXA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight">DataLens</span><span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase tracking-wider">Core</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Dataset Intelligence</span></div></div><div class="px-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Platform Navigation</span></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="datasets" href="#"><span class="material-symbols-outlined text-lg">database</span>Datasets</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-lg">upload_file</span>Upload Dataset</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="data-analysis" href="#"><span class="material-symbols-outlined text-lg">query_stats</span>Data Analysis</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="visualizations" href="#"><span class="material-symbols-outlined text-lg">pie_chart</span>Visualizations</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="insights" href="#"><span class="material-symbols-outlined text-lg">auto_awesome</span>Insights</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="reports" href="#"><span class="material-symbols-outlined text-lg">summarize</span>Reports</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="history" href="#"><span class="material-symbols-outlined text-lg">history</span>History</a></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-lowest/50"><nav data-active-classes="bg-primary-container text-on-primary-container font-label-lg"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="settings" href="#"><span class="material-symbols-outlined text-lg">settings</span>Settings</a></nav><div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant">Engine: Active</span></div><span class="font-label-sm text-label-sm text-secondary font-label-md">v2.8.4</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Alex Mercer</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Lead Data Analyst</span></div></div><div class="flex items-center gap-space-xs"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-base">dark_mode</span></button><button class="p-1 text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors" title="Logout" type="button"><span class="material-symbols-outlined text-base">logout</span></button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-on-surface font-title-md text-title-md">Active Workspace</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-80 h-10 pl-9 pr-4 rounded-lg bg-surface-container border-0 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search datasets, metrics, columns... (⌘K)" type="text"/></div><a class="flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-base">add</span>+ New Analysis</a><div class="relative"><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">3</span></button></div><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Help &amp; Documentation" type="button"><span class="material-symbols-outlined text-xl">help_outline</span></button><div class="flex items-center pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full pb-space-2xl space-y-space-xl">
+<!-- Internal Navigation & Studio Breadcrumb Context -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Datasets</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="text-secondary font-medium">customer_churn_q3.csv</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="text-on-surface">Executive Reports Studio</span>
+</div>
+<div class="flex items-baseline gap-space-sm pt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Executive Report &amp; Dossier Generation</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary text-label-sm font-label-sm uppercase tracking-wider">Automated Synthesizer</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Compile automated statistical dossiers, deterministic quality audits, predictive heuristics, and board-ready analytical summaries directly into publication-grade documents.
+      </p>
+</div>
+<!-- Quick Telemetry & Audit Meta Badge -->
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container-low px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Engine v2.8.4 Ready</span>
+</div>
+<span class="text-outline-variant font-label-sm">|</span>
+<span class="font-label-sm text-label-sm text-primary font-mono tracking-tight">Audit Hash: #REP-8821</span>
+</div>
+</div>
+<!-- Top Controls & Template Filter Strip -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-md backdrop-blur-xl">
+<!-- Template Selector Pill Tabs -->
+<div class="flex flex-wrap items-center gap-1.5 p-1 bg-surface-container-lowest rounded-lg">
+<button class="px-3.5 py-1.5 rounded-md font-label-sm text-label-sm transition-all duration-150 bg-primary-container text-on-primary-container shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">auto_stories</span>
+        Full Executive Dossier (Comprehensive)
+      </button>
+<button class="px-3.5 py-1.5 rounded-md font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+        Data Quality &amp; Governance Audit
+      </button>
+<button class="px-3.5 py-1.5 rounded-md font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">hub</span>
+        Statistical &amp; Correlation Brief
+      </button>
+<button class="px-3.5 py-1.5 rounded-md font-label-sm text-label-sm transition-all duration-150 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">co_present</span>
+        Boardroom Pitch Deck
+      </button>
+</div>
+<!-- Actions Area -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<!-- Export Dropdown -->
+<div class="relative inline-block text-left" id="exportMenuWrapper">
+<button class="h-10 px-3.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center gap-2 transition-all" id="exportDropdownBtn">
+<span class="material-symbols-outlined text-base text-secondary">file_download</span>
+<span>Export Selected</span>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 rounded-lg bg-surface-container shadow-xl z-30 p-1.5 space-y-1" id="exportDropdownPanel">
+<a class="flex items-center gap-2 px-3 py-2 rounded font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-primary text-base">picture_as_pdf</span>
+            Executive PDF Dossier (.pdf)
+          </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-secondary text-base">table_view</span>
+            Cleaned Parquet / CSV Data (.csv)
+          </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-tertiary text-base">data_object</span>
+            JSON Telemetry Payload (.json)
+          </a>
+<a class="flex items-center gap-2 px-3 py-2 rounded font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-primary-fixed text-base">html</span>
+            Interactive HTML Offline Pack (.zip)
+          </a>
+</div>
+</div>
+<!-- Generate Primary Button -->
+<button class="h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary hover:text-on-primary shadow-lg transition-all duration-150 flex items-center gap-2 group">
+<span class="material-symbols-outlined text-lg transition-transform group-hover:rotate-180 duration-500">sync</span>
+<span>Generate New Dossier</span>
+</button>
+</div>
+</div>
+<!-- Primary Asymmetric Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column (8 cols): Executive Dossier Configurator & Document Sheet Preview -->
+<div class="lg:col-span-8 space-y-space-xl">
+<!-- Executive Dossier Metadata & Configuration Card -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-16 rounded bg-surface-container-highest flex flex-col items-center justify-center shadow-inner relative overflow-hidden flex-shrink-0">
+<span class="material-symbols-outlined text-2xl text-secondary">description</span>
+<span class="font-mono text-[9px] text-outline font-semibold">Q3.EXEC</span>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-container"></div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-title-md text-title-md text-on-surface">DataLens Autonomous Intelligence Briefing</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary text-label-sm font-label-sm">Dossier ID: 902-DX</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configured for Alex Mercer (Lead Data Analyst) • Generated: Realtime Snapshot</p>
+</div>
+</div>
+<div class="flex sm:flex-col items-end gap-1">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Confidence 99.4%</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">14,280 Rows Analyzed</span>
+</div>
+</div>
+<!-- Metric Snapshot Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm p-space-md rounded-lg bg-surface-container">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Selected Scope</div>
+<div class="font-title-md text-title-md text-on-surface mt-0.5">24 Attributes</div>
+<div class="font-body-sm text-body-sm text-secondary">100% Schema Validated</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Correlated Clusters</div>
+<div class="font-title-md text-title-md text-on-surface mt-0.5">4 Risk Groups</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">High-Hazard Cohort</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Imputed Cells</div>
+<div class="font-title-md text-title-md text-on-surface mt-0.5">14 Records</div>
+<div class="font-body-sm text-body-sm text-secondary">KNN Zero-Divergence</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Document Volume</div>
+<div class="font-title-md text-title-md text-on-surface mt-0.5">12 Pages</div>
+<div class="font-body-sm text-body-sm text-outline">Est. Compile: 1.2s</div>
+</div>
+</div>
+<!-- Included Sections Toggles -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Included Dossier Sections</span>
+<span class="font-label-sm text-label-sm text-outline">4 of 5 Enabled</span>
+</div>
+<div class="space-y-2">
+<!-- Section 1 -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high/60 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md">
+<span class="font-mono text-label-sm text-secondary font-bold">01</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Executive Overview &amp; High-Level KPIs</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Executive summary narrative, total ARR at risk ($142.5K), customer health composite (96.4%).</div>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" type="checkbox"/>
+</label>
+<!-- Section 2 -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high/60 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md">
+<span class="font-mono text-label-sm text-secondary font-bold">02</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Data Quality, Missingness &amp; Imputation Log</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">14 null records identified &amp; documented via KNN multivariate median matching.</div>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" type="checkbox"/>
+</label>
+<!-- Section 3 -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high/60 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md">
+<span class="font-mono text-label-sm text-secondary font-bold">03</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Univariate &amp; Bivariate Parametric Analysis</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Pearson correlation matrix heatmaps, skewness indices, distribution densities across cohorts.</div>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" type="checkbox"/>
+</label>
+<!-- Section 4 -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high/60 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md">
+<span class="font-mono text-label-sm text-secondary font-bold">04</span>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Churn Risk Predictor &amp; Survival Curves</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Month-to-month contracts vs annual tenure hazards, Kaplan-Meier velocity regression.</div>
+</div>
+</div>
+<input checked="" class="w-5 h-5 rounded bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" type="checkbox"/>
+</label>
+<!-- Section 5 -->
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high/30 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md">
+<span class="font-mono text-label-sm text-outline font-bold">05</span>
+<div>
+<div class="font-label-lg text-label-lg text-outline group-hover:text-on-surface-variant transition-colors">Raw Data Appendix &amp; Dictionary Log</div>
+<div class="font-body-sm text-body-sm text-outline">First 500 rows with complete schema typings, memory footprints, and hashing signatures.</div>
+</div>
+</div>
+<input class="w-5 h-5 rounded bg-surface-container-lowest text-primary-container focus:ring-0 focus:ring-offset-0 cursor-pointer accent-primary-container" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Live Document Canvas Preview (Realistic Miniature Sheet) -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">pageview</span>
+<span class="font-title-md text-title-md text-on-surface">Interactive Canvas Preview</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Showing Sheet 1 of 12)</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high rounded-md p-1">
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Zoom out">
+<span class="material-symbols-outlined text-sm">zoom_out</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface px-1.5 font-mono">100%</span>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Zoom in">
+<span class="material-symbols-outlined text-sm">zoom_in</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded transition-colors ml-1" title="Fullscreen Document">
+<span class="material-symbols-outlined text-sm">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Rendered Physical Sheet Simulation Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-6 md:p-8 shadow-xl relative overflow-hidden">
+<!-- Ambient Watermark & Document Grid -->
+<div class="absolute right-6 bottom-6 opacity-5 pointer-events-none select-none">
+<span class="font-display-lg text-display-lg text-on-surface font-black tracking-tighter">DATALENS</span>
+</div>
+<!-- Document Header -->
+<div class="flex items-start justify-between pb-6 bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-headline-sm shadow-md">
+                Δ
+              </div>
+<div>
+<div class="font-title-md text-title-md text-on-surface tracking-tight uppercase">Executive Intelligence Dossier</div>
+<div class="font-mono text-label-sm text-label-sm text-secondary">SERIES: Q3-STRATEGIC-CHURN-AUDIT</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-outline uppercase font-mono">Classification</div>
+<div class="font-label-md text-label-md text-secondary font-bold">RESTRICTED // BOARD READY</div>
+</div>
+</div>
+<!-- Document Sheet Body -->
+<div class="space-y-6 pt-4">
+<!-- Summary Intro Block -->
+<div class="p-4 rounded-lg bg-surface-container space-y-2">
+<div class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Executive Narrative Snapshot</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Analysis of <span class="font-semibold text-primary">customer_churn_q3.csv</span> (14,280 accounts) identifies a statistically critical churn cluster concentrated within monthly subscription tiers utilizing legacy gateway transactions. Survival velocity indicates actionable interventions must occur prior to Month 3.2.
+              </p>
+</div>
+<!-- Mini Document KPI Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-lg bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">ARR Exposure</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight block my-1">$142,500</span>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">arrow_upward</span>
+                  +8.4% vs Q2 Benchmark
+                </span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">System Data Health</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight block my-1">96.4%</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+                  KNN Zero-Divergence
+                </span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Dominant Hazard Period</span>
+<span class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight block my-1">92 Days</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">schedule</span>
+                  P-Value &lt; 0.001
+                </span>
+</div>
+</div>
+<!-- Embedded Vector Charts (Miniature Document Figures) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Figure 1: Correlation Vector Heat Profile -->
+<div class="p-4 rounded-lg bg-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Fig 1.1: Feature Correlation Vectors</span>
+<span class="font-mono text-label-sm text-label-sm text-outline">r-pearson</span>
+</div>
+<!-- Inline Minimal SVG Graphic -->
+<div class="w-full h-32 flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="20" x2="300" y1="20" y2="20"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="20" x2="300" y1="60" y2="60"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-opacity="0.1" x1="20" x2="300" y1="100" y2="100"></line>
+<!-- Bars / Vectors -->
+<rect fill="#2563eb" height="65" opacity="0.85" rx="3" width="28" x="30" y="35"></rect>
+<rect fill="#03b5d3" height="45" opacity="0.85" rx="3" width="28" x="80" y="55"></rect>
+<rect fill="#2563eb" height="80" rx="3" width="28" x="130" y="20"></rect>
+<rect fill="#03b5d3" height="30" opacity="0.6" rx="3" width="28" x="180" y="70"></rect>
+<rect fill="#7d4ce7" height="55" opacity="0.75" rx="3" width="28" x="230" y="45"></rect>
+<!-- Data points -->
+<circle cx="44" cy="35" fill="#dbe1ff" r="3"></circle>
+<circle cx="94" cy="55" fill="#acedff" r="3"></circle>
+<circle cx="144" cy="20" fill="#dbe1ff" r="3"></circle>
+<circle cx="194" cy="70" fill="#acedff" r="3"></circle>
+<circle cx="244" cy="45" fill="#f6edff" r="3"></circle>
+</svg>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>Tenure</span>
+<span>Charges</span>
+<span>Contract</span>
+<span>Tickets</span>
+<span>Paperless</span>
+</div>
+</div>
+<!-- Figure 2: Kaplan-Meier Hazard Velocity -->
+<div class="p-4 rounded-lg bg-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">Fig 1.2: Kaplan-Meier Retention Decay</span>
+<span class="font-mono text-label-sm text-label-sm text-secondary">s(t) curve</span>
+</div>
+<div class="w-full h-32 flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M 20 20 L 70 20 L 70 38 L 120 38 L 120 58 L 170 58 L 170 85 L 230 85 L 230 98 L 300 98" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 20 20 L 70 20 L 70 38 L 120 38 L 120 58 L 170 58 L 170 85 L 230 85 L 230 98 L 300 98 L 300 110 L 20 110 Z" fill="url(#gradient-survival)" opacity="0.15"></path>
+<!-- Confidence Band Line -->
+<path d="M 20 28 L 70 28 L 70 48 L 120 48 L 120 70 L 170 70 L 170 96 L 230 96 L 230 106 L 300 106" stroke="#b4c5ff" stroke-dasharray="3 3" stroke-width="1"></path>
+<defs>
+<lineargradient id="gradient-survival" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>0 mo</span>
+<span>6 mo</span>
+<span>12 mo</span>
+<span>24 mo</span>
+<span>36 mo</span>
+</div>
+</div>
+</div>
+<!-- Mini Document Formatted Table -->
+<div class="rounded-lg bg-surface-container overflow-hidden">
+<div class="px-4 py-2.5 bg-surface-container-high flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Priority Intervention Cohorts</span>
+<span class="font-mono text-label-sm text-label-sm text-outline">Top 3 Clusters</span>
+</div>
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<tr>
+<th class="px-4 py-2">Cohort Segment</th>
+<th class="px-4 py-2">Volume</th>
+<th class="px-4 py-2">Hazard Index</th>
+<th class="px-4 py-2 text-right">Risk Value</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-4 py-2.5 font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                      Monthly • Fiber Optic • Electronic Check
+                    </td>
+<td class="px-4 py-2.5 font-mono">3,124</td>
+<td class="px-4 py-2.5 text-error font-semibold">0.824 (Severe)</td>
+<td class="px-4 py-2.5 text-right font-mono font-medium">$88,400</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-4 py-2.5 font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                      Monthly • DSL • Mailed Check
+                    </td>
+<td class="px-4 py-2.5 font-mono">1,890</td>
+<td class="px-4 py-2.5 text-secondary font-semibold">0.512 (Moderate)</td>
+<td class="px-4 py-2.5 text-right font-mono font-medium">$34,100</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-4 py-2.5 font-medium flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                      Two-Year • Any Service • Auto-Pay
+                    </td>
+<td class="px-4 py-2.5 font-mono">9,266</td>
+<td class="px-4 py-2.5 text-outline font-semibold">0.086 (Safe)</td>
+<td class="px-4 py-2.5 text-right font-mono font-medium">$20,000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Page Numbering Footer on Sheet -->
+<div class="flex items-center justify-between pt-4 font-mono text-label-sm text-outline">
+<span>DataLens Protocol Engine • Document #GTU-PDS-8821</span>
+<span>Page 1 of 12</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (4 cols): Quick Exports, Automation & History List -->
+<div class="lg:col-span-4 space-y-space-xl">
+<!-- 1. One-Click Quick Exports Card -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-title-md text-title-md text-on-surface">Publish &amp; Distribution</h2>
+<span class="material-symbols-outlined text-secondary text-base">ios_share</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Download Executive PDF -->
+<button class="w-full p-space-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary flex items-start gap-space-sm transition-all duration-150 shadow-md group">
+<span class="material-symbols-outlined text-2xl flex-shrink-0 mt-0.5">picture_as_pdf</span>
+<div class="text-left flex-1 min-w-0">
+<div class="font-label-lg text-label-lg font-semibold flex items-center justify-between">
+<span>Download Executive PDF</span>
+<span class="font-mono text-label-sm opacity-80">3.4 MB</span>
+</div>
+<div class="font-body-sm text-body-sm opacity-90 mt-0.5">High-Res Vector Sheets • GTU Certified</div>
+</div>
+</button>
+<!-- Download Cleaned Parquet / CSV -->
+<button class="w-full p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-start gap-space-sm transition-all duration-150 group">
+<span class="material-symbols-outlined text-2xl text-secondary flex-shrink-0 mt-0.5">database</span>
+<div class="text-left flex-1 min-w-0">
+<div class="font-label-lg text-label-lg font-semibold flex items-center justify-between">
+<span>Cleaned Parquet / CSV</span>
+<span class="font-mono text-label-sm text-on-surface-variant">1.8 MB</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Includes KNN applied imputations</div>
+</div>
+</button>
+</div>
+<!-- Share Live Secret Link -->
+<div class="p-space-md rounded-lg bg-surface-container space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Share Live Secret Link</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-secondary text-label-sm font-label-sm">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Grant restricted viewer access via tokenized endpoint.</p>
+<div class="flex items-center gap-1.5 pt-1">
+<div class="relative flex-1">
+<input class="w-full h-9 pl-3 pr-8 rounded bg-surface-container-lowest text-on-surface font-mono text-label-sm focus:outline-none select-all" id="secretLinkInput" readonly="" value="https://datalens.gtu.ac/r/ch-8942-exec"/>
+<button class="absolute right-1.5 top-1.5 p-1 text-on-surface-variant hover:text-on-surface transition-colors" id="copySecretLinkBtn" title="Copy URL">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+<!-- Permission Selector -->
+<select class="h-9 px-2.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm focus:outline-none">
+<option>View Only</option>
+<option>Commentator</option>
+<option>Interactive Sandbox</option>
+</select>
+</div>
+</div>
+</div>
+<!-- 2. Scheduled Reports & Automated Recurrence -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">alarm</span>
+<h2 class="font-title-md text-title-md text-on-surface">Scheduled Pipeline</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Recurrence: On</span>
+</div>
+<!-- Schedule Toggle Row -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container">
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md text-on-surface font-medium">Weekly Executive Digest</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Runs every Monday at 08:00 UTC</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Webhook Integration Destinations -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Configured Dispatch Channels</span>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container text-body-sm">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Slack #analytics-feed</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Active</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container text-body-sm">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Email Executive Committee</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">6 Recipients</span>
+</div>
+</div>
+</div>
+<!-- 3. Recent Generated Reports History List -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">history</span>
+<h2 class="font-title-md text-title-md text-on-surface">Recent Output Dossiers</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-space-sm">
+<!-- History Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="p-2 rounded bg-surface-container-lowest text-primary">
+<span class="material-symbols-outlined text-lg">description</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface truncate font-medium">Q3 Customer Churn Strategic Brief.pdf</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">14 pages • 2 hours ago</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Preview Dossier">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded transition-colors" title="Download Document">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="p-2 rounded bg-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface truncate font-medium">Weekly Schema Drift &amp; Quality Audit.pdf</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">4 pages • Yesterday</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Preview Dossier">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-secondary rounded transition-colors" title="Download Document">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+<!-- History Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-between group">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="p-2 rounded bg-surface-container-lowest text-tertiary">
+<span class="material-symbols-outlined text-lg">dataset</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-md text-label-md text-on-surface truncate font-medium">Exploratory Correlation Matrix.csv</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Raw Export • 3 days ago</div>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded transition-colors" title="Preview Dossier">
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-tertiary rounded transition-colors" title="Download Document">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initReportsStudio() {
+    // Dropdown toggle
+    const dropdownBtn = document.getElementById('exportDropdownBtn');
+    const dropdownPanel = document.getElementById('exportDropdownPanel');
+    const wrapper = document.getElementById('exportMenuWrapper');
+
+    if (dropdownBtn && dropdownPanel) {
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownPanel.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!wrapper.contains(e.target)) {
+          dropdownPanel.classList.add('hidden');
+        }
+      });
+    }
+
+    // Copy secret link micro-interaction
+    const copyBtn = document.getElementById('copySecretLinkBtn');
+    const secretInput = document.getElementById('secretLinkInput');
+
+    if (copyBtn && secretInput) {
+      copyBtn.addEventListener('click', () => {
+        secretInput.select();
+        navigator.clipboard.writeText(secretInput.value).then(() => {
+          const originalIcon = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<span class="material-symbols-outlined text-sm text-secondary">done</span>';
+          setTimeout(() => {
+            copyBtn.innerHTML = originalIcon;
+          }, 1800);
+        });
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","surface-dim":"#0b1326","surface":"#0b1326","inverse-surface":"#dae2fd","primary-fixed":"#dbe1ff","secondary-container":"#03b5d3","surface-container-highest":"#2d3449","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","surface-tint":"#b4c5ff","on-error-container":"#ffdad6","on-surface":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-surface-variant":"#c3c6d7","on-primary-fixed":"#00174b","primary-container":"#2563eb","secondary-fixed-dim":"#4cd7f6","on-tertiary-fixed":"#23005c","secondary-fixed":"#acedff","surface-bright":"#31394d","on-primary-container":"#eeefff","on-secondary":"#003640","on-tertiary":"#3c0091","on-secondary-fixed-variant":"#004e5c","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#5516be","tertiary":"#d0bcff","surface-container-high":"#222a3d","secondary":"#4cd7f6","on-tertiary-container":"#f6edff","tertiary-fixed-dim":"#d0bcff","on-secondary-fixed":"#001f26","inverse-primary":"#0053db","on-error":"#690005","primary":"#b4c5ff","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#e9ddff","outline-variant":"#434655","background":"#0b1326","on-primary":"#002a78","surface-container-low":"#131b2e","surface-container":"#171f33","error":"#ffb4ab","tertiary-container":"#7d4ce7","surface-variant":"#2d3449","on-background":"#dae2fd","outline":"#8d90a0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","gutter-mobile":"0.75rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"metric-display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md pt-space-lg"><div class="flex items-center gap-space-sm px-space-xs mb-space-lg"><img alt="DataLens Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xep2HctBICippvpUkI3qxHFL9w3Df87DJYU872w88nlF7WmhaDLyiBqYI5GyZNfWwD4Bivxu6qFr2klk3fItDEs6TL2WR88hO6WL8d_JotXXDmefXWb0Fwk15zCgQY1m2UZBJBl1gQMQgAQ2lng5pkl94JrXTc1ACIGIME2mtvDQaXScjCJxEM1gcXpy1RLviV10UKONrMDmq2mePVkeYhzNedy_ITBK9txfDxLWegXA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight">DataLens</span><span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase tracking-wider">Core</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Dataset Intelligence</span></div></div><div class="px-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Platform Navigation</span></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="datasets" href="#"><span class="material-symbols-outlined text-lg">database</span>Datasets</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-lg">upload_file</span>Upload Dataset</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="data-analysis" href="#"><span class="material-symbols-outlined text-lg">query_stats</span>Data Analysis</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="visualizations" href="#"><span class="material-symbols-outlined text-lg">pie_chart</span>Visualizations</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="insights" href="#"><span class="material-symbols-outlined text-lg">auto_awesome</span>Insights</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="reports" href="#"><span class="material-symbols-outlined text-lg">summarize</span>Reports</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="history" href="#"><span class="material-symbols-outlined text-lg">history</span>History</a></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-lowest/50"><nav data-active-classes="bg-primary-container text-on-primary-container font-label-lg"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="settings" href="#"><span class="material-symbols-outlined text-lg">settings</span>Settings</a></nav><div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant">Engine: Active</span></div><span class="font-label-sm text-label-sm text-secondary font-label-md">v2.8.4</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Alex Mercer</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Lead Data Analyst</span></div></div><div class="flex items-center gap-space-xs"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-base">dark_mode</span></button><button class="p-1 text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors" title="Logout" type="button"><span class="material-symbols-outlined text-base">logout</span></button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-on-surface font-title-md text-title-md">Active Workspace</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-80 h-10 pl-9 pr-4 rounded-lg bg-surface-container border-0 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search datasets, metrics, columns... (⌘K)" type="text"/></div><a class="flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-base">add</span>+ New Analysis</a><div class="relative"><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">3</span></button></div><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Help &amp; Documentation" type="button"><span class="material-symbols-outlined text-xl">help_outline</span></button><div class="flex items-center pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-y-space-xl pb-space-2xl">
+<!-- Header Context & Status Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-lg relative overflow-hidden">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs min-w-0 z-10">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm flex-wrap">
+<span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="hover:text-on-surface transition-colors cursor-pointer">Active Workspace</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="text-secondary font-label-md text-label-md font-semibold">customer_churn_q3.csv</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="text-on-surface">System Processing</span>
+</div>
+<div class="flex items-center gap-space-md mt-1">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">DataLens Pipeline Execution</h1>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm shadow-[0_0_12px_rgba(76,215,246,0.2)]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span>Heuristic Engine Busy • 68% Compiled</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm z-10 self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-space-md h-10 rounded-lg bg-surface-container-high text-on-surface-variant font-label-md text-label-md cursor-not-allowed opacity-80 shadow-inner" disabled="">
+<svg class="animate-spin h-4 w-4 text-primary" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>Compiling Metrics...</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md h-10 rounded-lg bg-error-container/20 text-error hover:bg-error-container/40 transition-colors font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">close</span>
+<span>Cancel Pipeline</span>
+</button>
+</div>
+</div>
+<!-- Section 1: Live Ingestion & Processing Progress Console -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col gap-space-lg relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">memory</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Data Ingestion &amp; Analytical Profiler</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time stage execution &amp; statistical pass</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm bg-surface-container/60 px-space-md py-2 rounded-lg">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">database</span>
+<span>14,280 / 14,280 rows loaded</span>
+</div>
+<span class="text-outline">/</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">speed</span>
+<span>8,420 rows/sec</span>
+</div>
+<span class="text-outline">/</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">developer_board</span>
+<span>Memory: 342 MB allocated</span>
+</div>
+</div>
+</div>
+<!-- Stage Flow Cards -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm">
+<!-- Stage 1 -->
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container/40">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm font-bold text-secondary">check_circle</span> Stage 1
+            </span>
+<span class="font-label-sm text-label-sm text-outline">0.42s</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface truncate">File Ingestion &amp; UTF-8</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-full"></div>
+</div>
+</div>
+<!-- Stage 2 -->
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container/40">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm font-bold text-secondary">check_circle</span> Stage 2
+            </span>
+<span class="font-label-sm text-label-sm text-outline">0.88s</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface truncate">Schema Typings &amp; Null Scan</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-full"></div>
+</div>
+</div>
+<!-- Stage 3 (Active) -->
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container-high shadow-[0_0_16px_rgba(37,99,235,0.2)]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 animate-pulse">
+<span class="material-symbols-outlined text-sm">sync</span> Stage 3 • 68%
+            </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Active</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface truncate">Statistical Moments</span>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden relative">
+<div class="bg-gradient-to-r from-primary via-secondary to-primary h-full rounded-full w-[68%] animate-pulse"></div>
+</div>
+</div>
+<!-- Stage 4 (Queued) -->
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container/20 opacity-60">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Stage 4</span>
+<span class="font-label-sm text-label-sm text-outline">Queued</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">Multivariate Tensor Matrix</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline/20 h-full w-0"></div>
+</div>
+</div>
+<!-- Stage 5 (Queued) -->
+<div class="flex flex-col gap-2 p-space-sm rounded-lg bg-surface-container/20 opacity-60">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Stage 5</span>
+<span class="font-label-sm text-label-sm text-outline">Queued</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">Cluster Synthesis</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-outline/20 h-full w-0"></div>
+</div>
+</div>
+</div>
+<!-- Real-time Active Terminal Log Excerpt -->
+<div class="flex items-center justify-between px-space-md py-2 bg-surface-container-lowest/80 rounded-lg text-outline font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm truncate font-mono text-xs text-on-surface-variant">
+<span class="text-primary font-bold">&gt;&gt;</span>
+<span class="text-secondary">[EXEC_THREAD_04]</span>
+<span class="truncate">Computing covariance matrix across 38 numeric dimensions (stddev: churn_risk_factor)...</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="text-xs uppercase font-label-sm text-outline tracking-wider">Streaming</span>
+</div>
+</div>
+</div>
+<!-- Section 2: Comprehensive Shimmer Skeleton Dashboard -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-title-md text-title-md text-on-surface">Target Dashboard Preview</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">Synthesizing Elements</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Synchronizing rendering context with analytical stream</span>
+</div>
+<!-- 4 Skeleton KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+<div class="flex items-center justify-between">
+<div class="h-3 w-24 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high animate-pulse"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-8 w-32 bg-surface-container-high rounded-lg animate-pulse"></div>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-12 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-2.5 w-20 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+</div>
+<div class="h-6 w-full bg-surface-container/60 rounded flex items-end gap-1 px-1 py-0.5">
+<div class="w-1/6 h-2 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-4 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-3 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-5 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-4 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-6 bg-surface-container-high rounded-t"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+<div class="flex items-center justify-between">
+<div class="h-3 w-28 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high animate-pulse"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-8 w-28 bg-surface-container-high rounded-lg animate-pulse"></div>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-14 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-2.5 w-16 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+</div>
+<div class="h-6 w-full bg-surface-container/60 rounded flex items-end gap-1 px-1 py-0.5">
+<div class="w-1/6 h-4 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-3 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-5 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-2 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-6 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-5 bg-surface-container-high rounded-t"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+<div class="flex items-center justify-between">
+<div class="h-3 w-20 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high animate-pulse"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-8 w-36 bg-surface-container-high rounded-lg animate-pulse"></div>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-10 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-2.5 w-24 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+</div>
+<div class="h-6 w-full bg-surface-container/60 rounded flex items-end gap-1 px-1 py-0.5">
+<div class="w-1/6 h-3 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-5 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-6 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-4 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-3 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-5 bg-surface-container-high rounded-t"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
+<div class="flex items-center justify-between">
+<div class="h-3 w-32 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high animate-pulse"></div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-8 w-24 bg-surface-container-high rounded-lg animate-pulse"></div>
+<div class="flex items-center gap-2">
+<div class="h-2.5 w-16 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-2.5 w-12 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+</div>
+<div class="h-6 w-full bg-surface-container/60 rounded flex items-end gap-1 px-1 py-0.5">
+<div class="w-1/6 h-2 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-3 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-4 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-5 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-6 bg-surface-container-high rounded-t"></div>
+<div class="w-1/6 h-6 bg-surface-container-high rounded-t"></div>
+</div>
+</div>
+</div>
+<!-- Main Visualizations Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Large Chart Skeleton (2 cols) -->
+<div class="lg:col-span-2 bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden min-h-[360px]">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2.2s_infinite]"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-2">
+<div class="h-4 w-64 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-40 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-6 w-16 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-6 w-20 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-6 w-16 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+</div>
+<!-- Chart Area Placeholder -->
+<div class="flex-1 w-full flex flex-col justify-between pt-space-lg pb-space-sm">
+<div class="w-full flex items-center justify-between border-b border-surface-container-high/40 pb-6">
+<div class="h-2 w-8 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-0.5 flex-1 mx-4 bg-surface-container-high/30"></div>
+</div>
+<div class="w-full flex items-center justify-between border-b border-surface-container-high/40 pb-6">
+<div class="h-2 w-8 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-0.5 flex-1 mx-4 bg-surface-container-high/30"></div>
+</div>
+<div class="w-full flex items-center justify-between border-b border-surface-container-high/40 pb-6">
+<div class="h-2 w-8 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-0.5 flex-1 mx-4 bg-surface-container-high/30"></div>
+</div>
+<div class="w-full flex items-center justify-between pb-2">
+<div class="h-2 w-8 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-0.5 flex-1 mx-4 bg-surface-container-high/30"></div>
+</div>
+<!-- X Axis ticks placeholder -->
+<div class="flex justify-between pl-12 pr-4 pt-2">
+<div class="h-2 w-10 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-2 w-10 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-2 w-10 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-2 w-10 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-2 w-10 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-2 w-10 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Distribution Widget Skeleton (1 col) -->
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2.4s_infinite]"></div>
+<div class="flex items-center justify-between">
+<div class="h-4 w-44 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="w-6 h-6 rounded bg-surface-container-high animate-pulse"></div>
+</div>
+<!-- Circular Donut Placeholder -->
+<div class="flex justify-center items-center py-4">
+<div class="relative w-36 h-36 rounded-full border-8 border-surface-container-high/50 flex items-center justify-center animate-pulse">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest"></div>
+</div>
+</div>
+<!-- Distribution Legend Rows -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high animate-pulse"></div>
+<div class="h-3 w-24 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="h-3 w-10 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high animate-pulse"></div>
+<div class="h-3 w-28 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="h-3 w-12 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high animate-pulse"></div>
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-high animate-pulse"></div>
+<div class="h-3 w-16 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+<div class="h-3 w-10 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Skeleton Tabular Data Grid -->
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-xl shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-surface-container-highest/20 to-transparent -translate-x-full animate-[shimmer_2.5s_infinite]"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div class="flex flex-col gap-2">
+<div class="h-4 w-48 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-64 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-8 w-24 bg-surface-container-high rounded-lg animate-pulse"></div>
+<div class="h-8 w-28 bg-surface-container-high rounded-lg animate-pulse"></div>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<div class="w-full flex flex-col gap-2 min-w-[700px]">
+<!-- Table Header -->
+<div class="grid grid-cols-6 gap-4 px-4 py-3 bg-surface-container/60 rounded-lg">
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-24 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-16 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-28 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-14 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+<!-- Table Rows (6 rows with varied realistic skeleton tokens) -->
+<div class="grid grid-cols-6 gap-4 px-4 py-3.5 bg-surface-container/20 rounded-lg items-center">
+<div class="h-3 w-16 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-32 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-24 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-5 w-16 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+<div class="grid grid-cols-6 gap-4 px-4 py-3.5 bg-surface-container/10 rounded-lg items-center">
+<div class="h-3 w-14 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-28 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-16 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-36 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-5 w-20 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+<div class="grid grid-cols-6 gap-4 px-4 py-3.5 bg-surface-container/20 rounded-lg items-center">
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-36 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-24 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-5 w-14 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+<div class="grid grid-cols-6 gap-4 px-4 py-3.5 bg-surface-container/10 rounded-lg items-center">
+<div class="h-3 w-12 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-24 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-14 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-28 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-5 w-18 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+<div class="grid grid-cols-6 gap-4 px-4 py-3.5 bg-surface-container/20 rounded-lg items-center">
+<div class="h-3 w-16 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-30 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-22 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-32 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-5 w-16 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+<div class="grid grid-cols-6 gap-4 px-4 py-3.5 bg-surface-container/10 rounded-lg items-center">
+<div class="h-3 w-14 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-26 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-18 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-3 w-20 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-5 w-20 bg-surface-container-high rounded-full animate-pulse"></div>
+<div class="h-3 w-8 bg-surface-container-high rounded animate-pulse ml-auto"></div>
+</div>
+</div>
+</div>
+<!-- Skeleton Pagination / Meta Footer -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="h-3 w-36 bg-surface-container-high rounded animate-pulse"></div>
+<div class="flex items-center gap-2">
+<div class="h-7 w-7 rounded bg-surface-container-high animate-pulse"></div>
+<div class="h-7 w-7 rounded bg-surface-container-high animate-pulse"></div>
+<div class="h-7 w-7 rounded bg-surface-container-high animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

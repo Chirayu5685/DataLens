@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","surface-dim":"#0b1326","surface":"#0b1326","inverse-surface":"#dae2fd","primary-fixed":"#dbe1ff","secondary-container":"#03b5d3","surface-container-highest":"#2d3449","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","surface-tint":"#b4c5ff","on-error-container":"#ffdad6","on-surface":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-surface-variant":"#c3c6d7","on-primary-fixed":"#00174b","primary-container":"#2563eb","secondary-fixed-dim":"#4cd7f6","on-tertiary-fixed":"#23005c","secondary-fixed":"#acedff","surface-bright":"#31394d","on-primary-container":"#eeefff","on-secondary":"#003640","on-tertiary":"#3c0091","on-secondary-fixed-variant":"#004e5c","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#5516be","tertiary":"#d0bcff","surface-container-high":"#222a3d","secondary":"#4cd7f6","on-tertiary-container":"#f6edff","tertiary-fixed-dim":"#d0bcff","on-secondary-fixed":"#001f26","inverse-primary":"#0053db","on-error":"#690005","primary":"#b4c5ff","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#e9ddff","outline-variant":"#434655","background":"#0b1326","on-primary":"#002a78","surface-container-low":"#131b2e","surface-container":"#171f33","error":"#ffb4ab","tertiary-container":"#7d4ce7","surface-variant":"#2d3449","on-background":"#dae2fd","outline":"#8d90a0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","gutter-mobile":"0.75rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"metric-display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md pt-space-lg"><div class="flex items-center gap-space-sm px-space-xs mb-space-lg"><img alt="DataLens Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xep2HctBICippvpUkI3qxHFL9w3Df87DJYU872w88nlF7WmhaDLyiBqYI5GyZNfWwD4Bivxu6qFr2klk3fItDEs6TL2WR88hO6WL8d_JotXXDmefXWb0Fwk15zCgQY1m2UZBJBl1gQMQgAQ2lng5pkl94JrXTc1ACIGIME2mtvDQaXScjCJxEM1gcXpy1RLviV10UKONrMDmq2mePVkeYhzNedy_ITBK9txfDxLWegXA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight">DataLens</span><span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase tracking-wider">Core</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Dataset Intelligence</span></div></div><div class="px-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Platform Navigation</span></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="datasets" href="#"><span class="material-symbols-outlined text-lg">database</span>Datasets</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-lg">upload_file</span>Upload Dataset</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="data-analysis" href="#"><span class="material-symbols-outlined text-lg">query_stats</span>Data Analysis</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="visualizations" href="#"><span class="material-symbols-outlined text-lg">pie_chart</span>Visualizations</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="insights" href="#"><span class="material-symbols-outlined text-lg">auto_awesome</span>Insights</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="reports" href="#"><span class="material-symbols-outlined text-lg">summarize</span>Reports</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="history" href="#"><span class="material-symbols-outlined text-lg">history</span>History</a></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-lowest/50"><nav data-active-classes="bg-primary-container text-on-primary-container font-label-lg"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="settings" href="#"><span class="material-symbols-outlined text-lg">settings</span>Settings</a></nav><div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant">Engine: Active</span></div><span class="font-label-sm text-label-sm text-secondary font-label-md">v2.8.4</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Alex Mercer</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Lead Data Analyst</span></div></div><div class="flex items-center gap-space-xs"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-base">dark_mode</span></button><button class="p-1 text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors" title="Logout" type="button"><span class="material-symbols-outlined text-base">logout</span></button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-on-surface font-title-md text-title-md">Active Workspace</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-80 h-10 pl-9 pr-4 rounded-lg bg-surface-container border-0 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search datasets, metrics, columns... (⌘K)" type="text"/></div><a class="flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-base">add</span>+ New Analysis</a><div class="relative"><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">3</span></button></div><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Help &amp; Documentation" type="button"><span class="material-symbols-outlined text-xl">help_outline</span></button><div class="flex items-center pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg pb-space-2xl">
+<!-- Top Header Bar with Breadcrumb and Action Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="hover:text-primary transition-colors cursor-pointer">Datasets</span>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-mono text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            customer_churn_q3.csv
+          </div>
+<span class="material-symbols-outlined text-xs text-outline">chevron_right</span>
+<span class="text-primary font-label-md text-label-md">Visualizations Studio</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight flex items-center gap-space-sm">
+          Interactive Visualizations Studio
+          <span class="px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase tracking-wider">Engine v2.8</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Construct multi-dimensional statistical charts, evaluate feature correlations, and generate presentation plots with hardware-accelerated vector rendering.
+        </p>
+</div>
+<!-- Action Group -->
+<div class="flex flex-wrap items-center gap-space-sm self-start xl:self-center">
+<button class="flex items-center gap-1.5 h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-base text-secondary">bookmark_add</span>
+<span>Save to Report</span>
+</button>
+<button class="flex items-center gap-1.5 h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+<span>Export High-Res</span>
+</button>
+<button class="flex items-center gap-1.5 h-9 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_20px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150">
+<span class="material-symbols-outlined text-base">add_chart</span>
+<span>+ New Chart View</span>
+</button>
+</div>
+</div>
+<!-- Chart Studio Top Configuration Controls Bar -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low shadow-sm">
+<!-- Row 1: Chart Type Tabs & Main Mode Selector -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-sm bg-surface-container-lowest/40 p-space-sm rounded-lg">
+<div class="flex flex-wrap items-center gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline tracking-wider mr-2 ml-1">Type</span>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-base">bar_chart</span>
+<span>Bar</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-base">show_chart</span>
+<span>Line</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_12px_rgba(37,99,235,0.4)]">
+<span class="material-symbols-outlined text-base">bubble_chart</span>
+<span>Scatter Plot</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-base">donut_large</span>
+<span>Donut / Pie</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-base">candlestick_chart</span>
+<span>Histogram</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-base">grid_on</span>
+<span>Heatmap</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm ml-auto">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-secondary font-mono text-[11px]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span>GPU Acceleration: WebGL2 active</span>
+</div>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" title="Fullscreen">
+<span class="material-symbols-outlined text-base">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Row 2: Dimension Mapping Matrix (X, Y, Color, Size) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-space-xs">
+<!-- X-Axis selector -->
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-container">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs text-primary">swap_horiz</span>
+              X-Axis Dimension
+            </span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-mono text-[10px]">NUMERICAL</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-2.5 py-1.5 rounded text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-mono text-secondary">MonthlyCharges ($)</span>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</div>
+</div>
+<!-- Y-Axis selector -->
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-container">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs text-secondary">swap_vert</span>
+              Y-Axis Dimension
+            </span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-secondary font-mono text-[10px]">NUMERICAL</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-2.5 py-1.5 rounded text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-mono text-secondary">TotalCharges ($)</span>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</div>
+</div>
+<!-- Hue Dimension -->
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-container">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs text-tertiary">palette</span>
+              Color / Hue
+            </span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-tertiary font-mono text-[10px]">CATEGORICAL</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-2.5 py-1.5 rounded text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-mono text-tertiary">Churn (Status: Yes/No)</span>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</div>
+</div>
+<!-- Size Dimension -->
+<div class="flex flex-col gap-1 p-2 rounded-lg bg-surface-container">
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1 uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs text-on-surface">bubble_chart</span>
+              Size Dimension
+            </span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-mono text-[10px]">CONTINUOUS</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-2.5 py-1.5 rounded text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-mono text-on-surface">TenureMonths (0–72)</span>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Row 3: Filter & Aggregation Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs text-label-sm font-label-sm">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Filter Tag -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-sm text-outline">filter_alt</span>
+<span class="text-outline">Filter:</span>
+<span class="font-mono text-primary">ContractType in ['Month-to-Month', 'One-Year']</span>
+<button class="material-symbols-outlined text-xs text-outline hover:text-error transition-colors">close</button>
+</div>
+<!-- Aggregation Selector -->
+<div class="flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-on-surface">
+<span class="text-outline">Agg:</span>
+<span class="font-semibold text-secondary">Raw Vectors (N=14,280)</span>
+<span class="material-symbols-outlined text-xs text-outline">expand_more</span>
+</div>
+<!-- Regression Model Toggle -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface">
+<span class="text-outline">Trend:</span>
+<span class="flex items-center gap-1 font-mono text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Polynomial 2nd Order
+            </span>
+</div>
+<!-- CI Band Toggle -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface">
+<span class="text-outline">CI:</span>
+<span class="font-mono text-secondary">95% Confidence Band</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs ml-auto">
+<button class="px-3 py-1.5 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">
+            Reset Studio
+          </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-sm">sync</span>
+            Apply Parameters
+          </button>
+</div>
+</div>
+</div>
+<!-- Main Stage Layout (Two Column Grid: Expansive Chart Canvas + Chart Inspector/Settings) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- LEFT / MAIN VISUAL CANVAS (9 of 12 cols = 75%) -->
+<div class="xl:col-span-9 flex flex-col gap-space-md p-space-lg rounded-2xl bg-surface-container-low shadow-xl">
+<!-- Canvas Header Bar: Title, Telemetry & Canvas Action Tools -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">
+                TotalCharges vs. MonthlyCharges stratified by Customer Churn &amp; Tenure
+              </h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-mono text-[10px] font-semibold">SVG 60 FPS</span>
+</div>
+<!-- Telemetry strip -->
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-mono">
+<span class="text-outline">Pearson r:</span>
+<span class="text-primary font-bold">+0.834</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 font-mono">
+<span class="text-outline">p-value:</span>
+<span class="text-secondary font-bold">&lt; 0.0001</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 font-mono">
+<span class="text-outline">R² variance:</span>
+<span class="text-on-surface font-bold">0.695</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 font-mono">
+<span class="text-outline">Vectors:</span>
+<span class="text-on-surface">14,280 points rendered</span>
+</span>
+</div>
+</div>
+<!-- Canvas Floating Controls Strip -->
+<div class="flex items-center gap-1 p-1 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md self-start md:self-auto">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Pan Canvas">
+<span class="material-symbols-outlined text-base">pan_tool</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Zoom In">
+<span class="material-symbols-outlined text-base">zoom_in</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Zoom Out">
+<span class="material-symbols-outlined text-base">zoom_out</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-primary transition-colors" title="Box Select">
+<span class="material-symbols-outlined text-base">crop_free</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Lasso Selector">
+<span class="material-symbols-outlined text-base">gesture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Reset View">
+<span class="material-symbols-outlined text-base">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- High-Fidelity Responsive SVG Scatter Plot Canvas Container -->
+<div class="relative w-full aspect-[16/9] min-h-[460px] rounded-xl bg-surface-container-lowest overflow-hidden flex items-center justify-center p-2 shadow-inner">
+<!-- Background Ambient Gradient Glows -->
+<div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 right-1/4 w-60 h-60 rounded-full bg-error/10 blur-3xl pointer-events-none"></div>
+<!-- Scatter Plot SVG -->
+<svg class="w-full h-full overflow-visible select-none" viewbox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Trendline glow filter -->
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<!-- Confidence Band Gradient -->
+<lineargradient id="ci-gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#38bdf8" stop-opacity="0.03"></stop>
+<stop offset="50%" stop-color="#38bdf8" stop-opacity="0.12"></stop>
+<stop offset="100%" stop-color="#38bdf8" stop-opacity="0.18"></stop>
+</lineargradient>
+<lineargradient id="trend-line-grad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#38bdf8"></stop>
+<stop offset="100%" stop-color="#b4c5ff"></stop>
+</lineargradient>
+</defs>
+<!-- Chart Bounds: X: 80 to 860 (W: 780), Y: 40 to 440 (H: 400) -->
+<!-- Horizontal Gridlines & Y-Axis Labels ($0 to $9,000) -->
+<g class="text-outline-variant text-[11px] font-mono">
+<!-- Y: $8,000 (y = 80) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="80" x2="860" y1="80" y2="80"></line>
+<text fill="#8d90a0" text-anchor="end" x="70" y="84">$8,000</text>
+<!-- Y: $6,000 (y = 160) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="80" x2="860" y1="160" y2="160"></line>
+<text fill="#8d90a0" text-anchor="end" x="70" y="164">$6,000</text>
+<!-- Y: $4,000 (y = 240) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="80" x2="860" y1="240" y2="240"></line>
+<text fill="#8d90a0" text-anchor="end" x="70" y="244">$4,000</text>
+<!-- Y: $2,000 (y = 320) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="80" x2="860" y1="320" y2="320"></line>
+<text fill="#8d90a0" text-anchor="end" x="70" y="324">$2,000</text>
+<!-- Y: $0 (y = 400) -->
+<line stroke="#2d3449" stroke-width="1.5" x1="80" x2="860" y1="400" y2="400"></line>
+<text fill="#8d90a0" text-anchor="end" x="70" y="404">$0</text>
+</g>
+<!-- Vertical Gridlines & X-Axis Labels ($20 to $120) -->
+<g class="text-outline-variant text-[11px] font-mono">
+<!-- X: $20 (x = 100) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="100" x2="100" y1="40" y2="400"></line>
+<text fill="#8d90a0" text-anchor="middle" x="100" y="424">$20</text>
+<!-- X: $40 (x = 240) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="240" x2="240" y1="40" y2="400"></line>
+<text fill="#8d90a0" text-anchor="middle" x="240" y="424">$40</text>
+<!-- X: $60 (x = 380) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="380" x2="380" y1="40" y2="400"></line>
+<text fill="#8d90a0" text-anchor="middle" x="380" y="424">$60</text>
+<!-- X: $80 (x = 520) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="520" x2="520" y1="40" y2="400"></line>
+<text fill="#8d90a0" text-anchor="middle" x="520" y="424">$80</text>
+<!-- X: $100 (x = 660) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="660" x2="660" y1="40" y2="400"></line>
+<text fill="#8d90a0" text-anchor="middle" x="660" y="424">$100</text>
+<!-- X: $120 (x = 800) -->
+<line stroke="#171f33" stroke-dasharray="3,3" stroke-width="1" x1="800" x2="800" y1="40" y2="400"></line>
+<text fill="#8d90a0" text-anchor="middle" x="800" y="424">$120</text>
+</g>
+<!-- Axis Titles -->
+<text fill="#c3c6d7" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="480" y="450">MonthlyCharges (USD / month)</text>
+<text fill="#c3c6d7" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" transform="rotate(-90)" x="-240" y="24">Total Cumulative Charges (USD)</text>
+<!-- 95% Confidence Interval Area Band -->
+<polygon fill="url(#ci-gradient)" points="100,392 240,365 380,315 520,245 660,150 800,55 800,105 660,195 520,285 380,350 240,388 100,404"></polygon>
+<!-- Polynomial Regression Curve -->
+<path d="M 100,398 Q 380,335 520,265 T 800,80" fill="none" filter="url(#glow)" stroke="url(#trend-line-grad)" stroke-width="3"></path>
+<path d="M 100,398 Q 380,335 520,265 T 800,80" fill="none" stroke="#acedff" stroke-width="1.2"></path>
+<!-- SCATTER POINTS CLUSTERS -->
+<!-- Group 1: Retained Customers (Electric Cyan/Blue #38bdf8 / #b4c5ff), variable radius (tenure) -->
+<g fill="#38bdf8" fill-opacity="0.65">
+<!-- Low MonthlyCharges / Long Tenure & Short Tenure -->
+<circle cx="108" cy="392" r="3"></circle>
+<circle cx="114" cy="384" r="4"></circle>
+<circle cx="120" cy="360" r="5"></circle>
+<circle cx="125" cy="340" r="6"></circle>
+<circle cx="132" cy="315" r="7"></circle>
+<circle cx="140" cy="370" r="3.5"></circle>
+<circle cx="150" cy="355" r="4.5"></circle>
+<circle cx="165" cy="330" r="5.5"></circle>
+<circle cx="180" cy="310" r="6"></circle>
+<circle cx="195" cy="360" r="3"></circle>
+<circle cx="210" cy="335" r="5"></circle>
+<circle cx="225" cy="300" r="6.5"></circle>
+<!-- Mid Range Monthly Charges -->
+<circle cx="260" cy="360" r="3"></circle>
+<circle cx="275" cy="325" r="5"></circle>
+<circle cx="290" cy="280" r="6"></circle>
+<circle cx="310" cy="340" r="4"></circle>
+<circle cx="325" cy="295" r="5.5"></circle>
+<circle cx="340" cy="250" r="7"></circle>
+<circle cx="355" cy="230" r="7.5"></circle>
+<circle cx="370" cy="310" r="4"></circle>
+<circle cx="385" cy="270" r="5.5"></circle>
+<circle cx="400" cy="220" r="7"></circle>
+<circle cx="415" cy="180" r="8"></circle>
+<circle cx="430" cy="285" r="4"></circle>
+<circle cx="445" cy="240" r="6"></circle>
+<circle cx="460" cy="195" r="7"></circle>
+<circle cx="475" cy="160" r="8"></circle>
+<!-- High Range Monthly Charges / High Tenure Retained -->
+<circle cx="505" cy="270" r="4"></circle>
+<circle cx="520" cy="230" r="6"></circle>
+<circle cx="535" cy="170" r="7"></circle>
+<circle cx="550" cy="130" r="8"></circle>
+<circle cx="565" cy="250" r="4.5"></circle>
+<circle cx="580" cy="205" r="6.5"></circle>
+<circle cx="595" cy="155" r="7.5"></circle>
+<circle cx="610" cy="110" r="8.5"></circle>
+<circle cx="625" cy="220" r="5"></circle>
+<circle cx="640" cy="175" r="6.5"></circle>
+<circle cx="655" cy="125" r="7.5"></circle>
+<circle cx="670" cy="85" r="8.5"></circle>
+<circle cx="690" cy="190" r="5"></circle>
+<circle cx="710" cy="140" r="7"></circle>
+<circle cx="730" cy="95" r="8"></circle>
+<circle cx="750" cy="70" r="9"></circle>
+<circle cx="770" cy="120" r="6.5"></circle>
+<circle cx="785" cy="75" r="8"></circle>
+<circle cx="795" cy="60" r="9"></circle>
+<circle cx="810" cy="85" r="7.5"></circle>
+</g>
+<!-- Group 2: Churned Customers (Vibrant Neon Coral #f43f5e), concentrated in low tenure (small radius) + high monthly -->
+<g fill="#f43f5e" fill-opacity="0.8">
+<!-- Cluster in early tenure Month-to-Month with high monthly fee -->
+<circle cx="510" cy="375" r="3"></circle>
+<circle cx="530" cy="365" r="3.5"></circle>
+<circle cx="545" cy="355" r="3"></circle>
+<circle cx="560" cy="340" r="4"></circle>
+<circle cx="580" cy="360" r="2.5"></circle>
+<circle cx="600" cy="345" r="3.5"></circle>
+<circle cx="615" cy="330" r="4"></circle>
+<circle cx="630" cy="350" r="3"></circle>
+<circle cx="645" cy="335" r="3.5"></circle>
+<circle cx="660" cy="315" r="4.5"></circle>
+<circle cx="675" cy="330" r="3"></circle>
+<circle cx="690" cy="305" r="4.5"></circle>
+<circle cx="710" cy="320" r="3"></circle>
+<circle cx="725" cy="290" r="4"></circle>
+<circle cx="740" cy="310" r="3"></circle>
+<circle cx="760" cy="285" r="4.5"></circle>
+<circle cx="775" cy="260" r="5"></circle>
+<circle cx="790" cy="275" r="3.5"></circle>
+<!-- Churns along the middle curve -->
+<circle cx="360" cy="370" r="3"></circle>
+<circle cx="420" cy="350" r="3.5"></circle>
+<circle cx="480" cy="330" r="4"></circle>
+<circle cx="630" cy="260" r="5"></circle>
+<circle cx="680" cy="230" r="5.5"></circle>
+<circle cx="720" cy="210" r="6"></circle>
+</g>
+<!-- Dense Cloud Simulation Layer for Visual Richness -->
+<g fill="#38bdf8" fill-opacity="0.25">
+<circle cx="110" cy="385" r="2"></circle><circle cx="130" cy="360" r="2.5"></circle><circle cx="150" cy="340" r="2"></circle><circle cx="170" cy="320" r="3"></circle>
+<circle cx="220" cy="350" r="2"></circle><circle cx="250" cy="310" r="2.5"></circle><circle cx="280" cy="270" r="3"></circle><circle cx="320" cy="260" r="3"></circle>
+<circle cx="360" cy="290" r="2.5"></circle><circle cx="390" cy="240" r="3"></circle><circle cx="430" cy="210" r="3"></circle><circle cx="470" cy="180" r="3.5"></circle>
+<circle cx="510" cy="220" r="3"></circle><circle cx="540" cy="160" r="3.5"></circle><circle cx="570" cy="140" r="4"></circle><circle cx="610" cy="130" r="3.5"></circle>
+<circle cx="650" cy="100" r="4"></circle><circle cx="680" cy="115" r="3.5"></circle><circle cx="720" cy="80" r="4"></circle><circle cx="760" cy="65" r="4"></circle>
+</g>
+<!-- Highlighted Data Point Focus Ring (Outlier Point) -->
+<g>
+<circle class="animate-pulse" cx="585" cy="192" fill="#38bdf8" fill-opacity="0.15" r="14"></circle>
+<circle cx="585" cy="192" fill="#38bdf8" r="8" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Crosshair Indicator Lines -->
+<line stroke="#38bdf8" stroke-dasharray="2,2" stroke-opacity="0.4" x1="585" x2="585" y1="40" y2="400"></line>
+<line stroke="#38bdf8" stroke-dasharray="2,2" stroke-opacity="0.4" x1="80" x2="860" y1="192" y2="192"></line>
+</g>
+</svg>
+<!-- Interactive Tooltip Card Floating Over Point #8942 -->
+<div class="absolute top-[28%] left-[58%] -translate-x-1/2 -translate-y-full mb-3 z-30 pointer-events-auto">
+<div class="flex flex-col gap-1.5 p-3 rounded-xl bg-surface-container-high/95 backdrop-blur-xl shadow-2xl min-w-[240px]">
+<div class="flex items-center justify-between pb-1 bg-surface-container-highest/40 -mx-3 -mt-3 p-2.5 rounded-t-xl">
+<span class="font-mono font-bold text-on-surface text-label-md">Customer #8942</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-mono text-[10px] font-semibold">RETAINED</span>
+</div>
+<div class="grid grid-cols-2 gap-x-3 gap-y-1 pt-1 font-label-sm text-label-sm">
+<span class="text-outline">Monthly Charges:</span>
+<span class="font-mono text-on-surface text-right font-semibold">$89.20</span>
+<span class="text-outline">Total Charges:</span>
+<span class="font-mono text-secondary text-right font-semibold">$5,320.10</span>
+<span class="text-outline">Tenure Duration:</span>
+<span class="font-mono text-on-surface text-right font-semibold">64 months</span>
+<span class="text-outline">Contract Type:</span>
+<span class="font-mono text-on-surface text-right">Two-Year</span>
+<span class="text-outline">Churn Probability:</span>
+<span class="font-mono text-primary text-right font-semibold">4.2% (Low)</span>
+</div>
+</div>
+<!-- Pointer Arrow -->
+<div class="w-3 h-3 bg-surface-container-high rotate-45 mx-auto -mt-1.5 shadow-md"></div>
+</div>
+<!-- Bottom Canvas Legend & Overlay Filter Switches -->
+<div class="absolute bottom-3 left-4 flex flex-wrap items-center gap-3 p-2 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md text-label-sm font-label-sm">
+<label class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+<span class="w-3 h-3 rounded-full bg-[#38bdf8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"></span>
+<span class="text-on-surface">Retained</span>
+<span class="font-mono text-outline text-[11px]">(10,348 pts)</span>
+</label>
+<span class="text-outline-variant">•</span>
+<label class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+<span class="w-3 h-3 rounded-full bg-[#f43f5e] shadow-[0_0_8px_rgba(244,63,94,0.6)]"></span>
+<span class="text-on-surface">Churned</span>
+<span class="font-mono text-outline text-[11px]">(3,932 pts)</span>
+</label>
+<span class="text-outline-variant">•</span>
+<label class="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+<span class="w-4 h-0.5 bg-primary"></span>
+<span class="text-primary font-medium">Trendline</span>
+<span class="font-mono text-outline text-[11px]">(95% CI)</span>
+</label>
+</div>
+<!-- Axis Zoom Indicator -->
+<div class="absolute bottom-3 right-4 flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md text-[11px] font-mono text-outline">
+<span>Range: X [20 - 120]</span>
+<span class="text-outline-variant">|</span>
+<span>Y [0 - 9k]</span>
+</div>
+</div>
+<!-- Canvas Sub-telemetry & Statistical Narrative -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Polynomial Fit Model</span>
+<div class="font-mono text-label-md text-secondary font-bold truncate">y = 0.812x² + 42.1x - 128.4</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Strong quadratic acceleration indicating compounded lifetime value as tenure exceeds 36 months.</p>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Churn Risk Boundary</span>
+<div class="font-mono text-label-md text-error font-bold truncate">Monthly &gt; $78.00 &amp; Tenure &lt; 14mo</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Critical friction corridor containing 68.4% of total customer churn occurrences.</p>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Outlier Tolerance</span>
+<div class="font-mono text-label-md text-primary font-bold truncate">Cook's D &lt; 0.04 (99.2% Nominal)</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No disruptive leverage vectors identified; variance maintains high homocedasticity.</p>
+</div>
+</div>
+</div>
+<!-- RIGHT INSPECTOR / GALLERY PANEL (3 of 12 cols = 25%) -->
+<div class="xl:col-span-3 flex flex-col gap-space-lg">
+<!-- Saved Plot Gallery & Presets -->
+<div class="flex flex-col gap-space-md p-space-md rounded-2xl bg-surface-container-low shadow-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-primary">auto_stories</span>
+<h3 class="font-title-md text-title-md text-on-surface">Gallery &amp; Presets</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-outline font-mono text-[11px]">4 Saved</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Preset Card 1: Tenure Distribution (Bar chart preview) -->
+<div class="flex flex-col gap-2 p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary transition-colors">Contract Tenure Dist.</span>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-on-surface transition-colors">arrow_forward</span>
+</div>
+<div class="w-full h-14 bg-surface-container-lowest rounded-lg p-2 flex items-end justify-between gap-1 overflow-hidden">
+<div class="w-full bg-primary/40 rounded-t h-[40%] group-hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/40 rounded-t h-[65%] group-hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/40 rounded-t h-[85%] group-hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/40 rounded-t h-[50%] group-hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/40 rounded-t h-[95%] group-hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/40 rounded-t h-[70%] group-hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/40 rounded-t h-[30%] group-hover:bg-primary transition-colors"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-outline">
+<span>Categorical Bar</span>
+<span>N=14,280</span>
+</div>
+</div>
+<!-- Preset Card 2: Monthly Charges KDE (Histogram curve preview) -->
+<div class="flex flex-col gap-2 p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-secondary transition-colors">Monthly Charges KDE</span>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-on-surface transition-colors">arrow_forward</span>
+</div>
+<div class="w-full h-14 bg-surface-container-lowest rounded-lg p-1.5 flex items-end overflow-hidden">
+<svg class="w-full h-full text-secondary" viewbox="0 0 200 50">
+<path d="M 0,48 Q 40,48 60,15 T 100,35 T 140,8 T 200,48 Z" fill="currentColor" fill-opacity="0.2"></path>
+<path d="M 0,48 Q 40,48 60,15 T 100,35 T 140,8 T 200,48" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-outline">
+<span>Kernel Density (Gaussian)</span>
+<span>Bimodal</span>
+</div>
+</div>
+<!-- Preset Card 3: Correlation Heatmap (Mini 4x4 matrix) -->
+<div class="flex flex-col gap-2 p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-tertiary transition-colors">Correlation Matrix</span>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-on-surface transition-colors">arrow_forward</span>
+</div>
+<div class="grid grid-cols-4 gap-1 w-full h-14 bg-surface-container-lowest p-1 rounded-lg">
+<div class="bg-primary/90 rounded"></div>
+<div class="bg-primary/40 rounded"></div>
+<div class="bg-secondary/20 rounded"></div>
+<div class="bg-primary/80 rounded"></div>
+<div class="bg-primary/40 rounded"></div>
+<div class="bg-primary/90 rounded"></div>
+<div class="bg-primary/60 rounded"></div>
+<div class="bg-secondary/30 rounded"></div>
+<div class="bg-secondary/20 rounded"></div>
+<div class="bg-primary/60 rounded"></div>
+<div class="bg-primary/90 rounded"></div>
+<div class="bg-primary/50 rounded"></div>
+<div class="bg-primary/80 rounded"></div>
+<div class="bg-secondary/30 rounded"></div>
+<div class="bg-primary/50 rounded"></div>
+<div class="bg-primary/90 rounded"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-outline">
+<span>4x4 Continuous Tensor</span>
+<span>r: -0.32 to +0.83</span>
+</div>
+</div>
+<!-- Preset Card 4: Churn vs Support Tickets (Boxplot) -->
+<div class="flex flex-col gap-2 p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all cursor-pointer group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-error transition-colors">Churn vs Tickets</span>
+<span class="material-symbols-outlined text-xs text-outline group-hover:text-on-surface transition-colors">arrow_forward</span>
+</div>
+<div class="w-full h-14 bg-surface-container-lowest rounded-lg p-2 flex items-center justify-around">
+<!-- Box 1 -->
+<div class="flex flex-col items-center w-8">
+<div class="w-0.5 h-2 bg-outline"></div>
+<div class="w-6 h-6 rounded bg-secondary/30 border-0 flex items-center justify-center">
+<div class="w-full h-0.5 bg-secondary"></div>
+</div>
+<div class="w-0.5 h-2 bg-outline"></div>
+</div>
+<!-- Box 2 -->
+<div class="flex flex-col items-center w-8">
+<div class="w-0.5 h-3 bg-outline"></div>
+<div class="w-6 h-7 rounded bg-error/30 border-0 flex items-center justify-center">
+<div class="w-full h-0.5 bg-error"></div>
+</div>
+<div class="w-0.5 h-1 bg-outline"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono text-outline">
+<span>Box &amp; Whisker (IQR)</span>
+<span>Δ +3.2 Tickets</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Tuning Options Panel -->
+<div class="flex flex-col gap-space-md p-space-md rounded-2xl bg-surface-container-low shadow-xl">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-secondary">tune</span>
+<h3 class="font-title-md text-title-md text-on-surface">Visual Tuning</h3>
+</div>
+<button class="text-xs text-primary hover:underline font-label-sm">Restore</button>
+</div>
+<!-- Color Palette Picker -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Palette Theme</label>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<div class="flex -space-x-1">
+<div class="w-3.5 h-3.5 rounded-full bg-[#38bdf8]"></div>
+<div class="w-3.5 h-3.5 rounded-full bg-[#f43f5e]"></div>
+<div class="w-3.5 h-3.5 rounded-full bg-[#d0bcff]"></div>
+</div>
+<span>Electric Nebula (Default)</span>
+</div>
+<span class="material-symbols-outlined text-sm text-outline">expand_more</span>
+</div>
+</div>
+<!-- Vector Opacity Slider -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase tracking-wider">Scatter Alpha Opacity</span>
+<span class="font-mono text-secondary font-bold">75%</span>
+</div>
+<div class="relative w-full h-2 bg-surface-container rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-secondary w-3/4 rounded-full"></div>
+</div>
+</div>
+<!-- Point Radius Control -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline uppercase tracking-wider">Base Vector Radius</span>
+<span class="font-mono text-primary font-bold">4.0 px</span>
+</div>
+<div class="relative w-full h-2 bg-surface-container rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-primary w-2/5 rounded-full"></div>
+</div>
+</div>
+<!-- Toggles for Scale and Trend Confidence -->
+<div class="flex flex-col gap-2 pt-space-xs font-label-md text-label-md">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<span class="text-on-surface">Trend Confidence Bands</span>
+<div class="w-8 h-4 rounded-full bg-primary-container p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-on-primary-container"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<span class="text-on-surface">Logarithmic Scale (X-Axis)</span>
+<div class="w-8 h-4 rounded-full bg-surface-container-highest p-0.5 flex items-center justify-start cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-outline"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<span class="text-on-surface">Logarithmic Scale (Y-Axis)</span>
+<div class="w-8 h-4 rounded-full bg-surface-container-highest p-0.5 flex items-center justify-start cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-outline"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<span class="text-on-surface">Jitter Noise (De-collision)</span>
+<div class="w-8 h-4 rounded-full bg-primary-container p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-on-primary-container"></div>
+</div>
+</div>
+</div>
+<!-- Export Preset Button -->
+<button class="w-full h-9 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base text-primary">save</span>
+            Save View as Preset
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","surface-dim":"#0b1326","surface":"#0b1326","inverse-surface":"#dae2fd","primary-fixed":"#dbe1ff","secondary-container":"#03b5d3","surface-container-highest":"#2d3449","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","surface-tint":"#b4c5ff","on-error-container":"#ffdad6","on-surface":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-surface-variant":"#c3c6d7","on-primary-fixed":"#00174b","primary-container":"#2563eb","secondary-fixed-dim":"#4cd7f6","on-tertiary-fixed":"#23005c","secondary-fixed":"#acedff","surface-bright":"#31394d","on-primary-container":"#eeefff","on-secondary":"#003640","on-tertiary":"#3c0091","on-secondary-fixed-variant":"#004e5c","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#5516be","tertiary":"#d0bcff","surface-container-high":"#222a3d","secondary":"#4cd7f6","on-tertiary-container":"#f6edff","tertiary-fixed-dim":"#d0bcff","on-secondary-fixed":"#001f26","inverse-primary":"#0053db","on-error":"#690005","primary":"#b4c5ff","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#e9ddff","outline-variant":"#434655","background":"#0b1326","on-primary":"#002a78","surface-container-low":"#131b2e","surface-container":"#171f33","error":"#ffb4ab","tertiary-container":"#7d4ce7","surface-variant":"#2d3449","on-background":"#dae2fd","outline":"#8d90a0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","gutter-mobile":"0.75rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"metric-display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md pt-space-lg"><div class="flex items-center gap-space-sm px-space-xs mb-space-lg"><img alt="DataLens Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xep2HctBICippvpUkI3qxHFL9w3Df87DJYU872w88nlF7WmhaDLyiBqYI5GyZNfWwD4Bivxu6qFr2klk3fItDEs6TL2WR88hO6WL8d_JotXXDmefXWb0Fwk15zCgQY1m2UZBJBl1gQMQgAQ2lng5pkl94JrXTc1ACIGIME2mtvDQaXScjCJxEM1gcXpy1RLviV10UKONrMDmq2mePVkeYhzNedy_ITBK9txfDxLWegXA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight">DataLens</span><span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase tracking-wider">Core</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Dataset Intelligence</span></div></div><div class="px-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Platform Navigation</span></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="datasets" href="#"><span class="material-symbols-outlined text-lg">database</span>Datasets</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg transition-all duration-150 bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-lg">upload_file</span>Upload Dataset</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="data-analysis" href="#"><span class="material-symbols-outlined text-lg">query_stats</span>Data Analysis</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="visualizations" href="#"><span class="material-symbols-outlined text-lg">pie_chart</span>Visualizations</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="insights" href="#"><span class="material-symbols-outlined text-lg">auto_awesome</span>Insights</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="reports" href="#"><span class="material-symbols-outlined text-lg">summarize</span>Reports</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="history" href="#"><span class="material-symbols-outlined text-lg">history</span>History</a></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-lowest/50"><nav data-active-classes="bg-primary-container text-on-primary-container font-label-lg"><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-all duration-150" data-path="settings" href="#"><span class="material-symbols-outlined text-lg">settings</span>Settings</a></nav><div class="flex items-center justify-between px-space-md py-2 rounded-lg bg-surface-container/60"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant">Engine: Active</span></div><span class="font-label-sm text-label-sm text-secondary font-label-md">v2.8.4</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface truncate">Alex Mercer</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Lead Data Analyst</span></div></div><div class="flex items-center gap-space-xs"><button class="p-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-base">dark_mode</span></button><button class="p-1 text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded transition-colors" title="Logout" type="button"><span class="material-symbols-outlined text-base">logout</span></button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-on-surface font-title-md text-title-md">Active Workspace</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-80 h-10 pl-9 pr-4 rounded-lg bg-surface-container border-0 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search datasets, metrics, columns... (⌘K)" type="text"/></div><a class="flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-base">add</span>+ New Analysis</a><div class="relative"><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">3</span></button></div><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Help & Documentation" type="button"><span class="material-symbols-outlined text-xl">help_outline</span></button><div class="flex items-center pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Top Ambient Glow Anchor -->
+<div class="relative w-full">
+<div class="absolute -top-10 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute -top-6 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+</div>
+<!-- Page Header Hierarchy -->
+<section class="flex flex-col gap-space-xs mt-space-md mb-space-xl">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Datasets</span>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<span class="text-secondary font-medium">Upload New</span>
+<span class="ml-space-sm px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary text-label-sm font-label-sm uppercase tracking-wider">Engine v2.8 Ready</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Upload Your Dataset</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-3xl">
+          Upload CSV, XLS, XLSX, or JSON files up to 250MB for autonomous validation, statistical profiling, and instant schema synthesis.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-secondary">terminal</span>
+<span>CLI Upload</span>
+</button>
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-tertiary">hub</span>
+<span>Connect S3 / GCS</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Workstation Grid: Upload Zone + Real-time Telemetry Pipeline -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Interactive Dropzone (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Drag & Drop Container -->
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low/90 backdrop-blur-xl p-space-xl flex flex-col items-center justify-center text-center transition-all duration-300 shadow-xl min-h-[420px]" id="dropzone">
+<!-- Ambient radial pulse highlight on hover -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/10 via-transparent to-secondary/5 opacity-40 group-hover:opacity-100 transition-opacity"></div>
+<!-- Faux Decorative Grid Canvas Behind Dropper -->
+<div class="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity pointer-events-none flex items-center justify-center">
+<svg fill="none" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="grid-pattern" patternunits="userSpaceOnUse" width="32">
+<path class="text-on-surface" d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Floating Data Point Indicators (Abstract SVG Accent) -->
+<div class="relative mb-space-lg flex items-center justify-center">
+<div class="absolute -inset-4 rounded-full bg-primary-container/20 blur-xl group-hover:scale-125 transition-transform duration-500"></div>
+<div class="relative w-24 h-24 rounded-2xl bg-surface-container-high/90 flex items-center justify-center shadow-md shadow-primary-container/20 group-hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">cloud_upload</span>
+<!-- Orbiting micro data particles -->
+<span class="absolute -top-1 -right-1 flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="absolute -bottom-2 -left-2 flex h-2.5 w-2.5">
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+</div>
+</div>
+<!-- Core Dropzone Copy -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+          Drag & Drop your dataset here
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-lg">
+          Release tabular files anywhere to initialize zero-setup profiling, semantic parsing, and type-inferencing.
+        </p>
+<!-- Supported Badges Strip -->
+<div class="flex flex-wrap items-center justify-center gap-space-xs mb-space-lg">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide">.CSV</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide">.XLS</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide">.XLSX</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide">.JSON</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm tracking-wide">.PARQUET</span>
+</div>
+<!-- Call To Action -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm z-10">
+<form method="POST" action="{% url 'upload_dataset' %}" enctype="multipart/form-data" id="upload-form">
+    {% csrf_token %}
+
+    <input
+        accept=".csv,.xls,.xlsx,.json,.parquet"
+        class="hidden"
+        id="file-input"
+        name="dataset"
+        type="file"
+    />
+</form>
+<button class="flex items-center gap-space-xs h-11 px-6 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_0_20px_rgba(37,99,235,0.45)] hover:bg-primary hover:text-on-primary hover:scale-[1.02] active:scale-[0.98] transition-all" onclick="document.getElementById('file-input').click()" type="button">
+<span class="material-symbols-outlined text-lg">folder_open</span>
+<span>Browse Computer</span>
+</button>
+</div>
+<!-- Micro Info -->
+<div class="mt-space-lg flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm opacity-80">
+<span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
+<span>Max file size: 250MB</span>
+<span class="text-outline">•</span>
+<span>UTF-8 & ISO-8859 auto-detection</span>
+<span class="text-outline">•</span>
+<span>SOC2 Encrypted</span>
+</div>
+</div>
+<!-- Quick Import Connectors Row -->
+<div class="bg-surface-container-low/70 rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="p-2.5 rounded-lg bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-xl">database</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">External Data Stream</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Query directly from PostgreSQL, Snowflake, or BigQuery</div>
+</div>
+</div>
+<button class="w-full md:w-auto px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all flex items-center justify-center gap-space-xs" type="button">
+<span>Configure Source</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Active Processing Pipeline Simulation (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Telemetry Card Outer -->
+<div class="rounded-xl bg-surface-container-low/90 backdrop-blur-xl p-space-lg shadow-xl relative overflow-hidden">
+<!-- Live Header with Glow Dot -->
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container/30 -mx-space-lg px-space-lg -mt-space-lg pt-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-lg text-label-lg text-on-surface tracking-tight font-semibold">Active Pipeline Synthesizer</span>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase font-mono">Job #SYN-8492</span>
+</div>
+<!-- File Profile Details Banner -->
+<div class="rounded-lg bg-surface-container p-space-md flex items-start gap-space-md mb-space-lg">
+<div class="p-2.5 rounded-lg bg-primary-container/15 text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface truncate font-semibold">customer_churn_q3_2024.csv</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">CSV</span>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div>
+<span class="block text-outline">Size</span>
+<span class="text-on-surface font-medium">18.4 MB</span>
+</div>
+<div>
+<span class="block text-outline">Rows</span>
+<span class="text-on-surface font-medium">14,280</span>
+</div>
+<div>
+<span class="block text-outline">Columns</span>
+<span class="text-on-surface font-medium">18 total</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pipeline Stepper Track -->
+<div class="space-y-space-md mb-space-lg relative">
+<!-- Continuous Vertical Path Behind Icons -->
+<div class="absolute left-[15px] top-3 bottom-6 w-0.5 bg-surface-container-highest -z-0"></div>
+<!-- Step 1: Uploading -->
+<div class="relative flex items-start gap-space-md z-10">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="flex flex-col flex-1 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">1. File Ingestion</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">100% (0.42s)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Buffered cleanly to high-throughput scratch memory</span>
+</div>
+</div>
+<!-- Step 2: Reading Dataset -->
+<div class="relative flex items-start gap-space-md z-10">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="flex flex-col flex-1 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">2. Structural Matrix Parsing</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">Completed ✓</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated delimiters, linebreaks, and header index</span>
+</div>
+</div>
+<!-- Step 3: Type Detection -->
+<div class="relative flex items-start gap-space-md z-10">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-base">check</span>
+</div>
+<div class="flex flex-col flex-1 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-medium">3. Schema & Type Classification</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">18/18 detected</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">9 numeric, 7 categorical, 2 timestamp columns</span>
+</div>
+</div>
+<!-- Step 4: Quality & Missing (Active Spinner) -->
+<div class="relative flex items-start gap-space-md z-10">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 shadow-[0_0_12px_rgba(37,99,235,0.6)]">
+<svg class="animate-spin h-4 w-4" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-col flex-1 pt-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-semibold">4. Data Quality & Anomaly Scan</span>
+<span class="font-label-sm text-label-sm text-primary font-mono font-bold animate-pulse">82%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Auditing null densities, variance bounds & outliers</span>
+<!-- Micro dynamic progress bar -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full mt-2 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary rounded-full w-[82%] transition-all duration-300"></div>
+</div>
+</div>
+</div>
+<!-- Step 5: Statistical Profile (Queued) -->
+<div class="relative flex items-start gap-space-md z-10 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-base">hourglass_empty</span>
+</div>
+<div class="flex flex-col flex-1 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">5. Statistical Profiling & Correlation</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Queued</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Generating quantiles, skewness & Pearson coefficient matrix</span>
+</div>
+</div>
+</div>
+<!-- Live Preview Findings Pill Area -->
+<div class="p-space-md rounded-lg bg-surface-container-highest/60 flex flex-col gap-space-xs mb-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Live Heuristics Stream</span>
+<span class="font-label-sm text-label-sm text-outline">Auto-Refreshed</span>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">check_circle</span>
+<span>0 duplicate rows</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-error">error</span>
+<span>3 missing values in <code class="text-primary font-mono font-medium">TotalCharges</code></span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">auto_graph</span>
+<span>Estimated Quality Score: <strong class="text-secondary">96%</strong></span>
+</div>
+</div>
+</div>
+<!-- Execution Action Row -->
+<div class="flex items-center justify-between gap-space-sm pt-space-xs">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-error hover:bg-surface-bright transition-colors font-label-md text-label-md" type="button">
+            Cancel Upload
+          </button>
+<button class="flex-1 flex items-center justify-center gap-space-xs px-4 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.4)] hover:bg-primary hover:text-on-primary transition-all" type="button">
+<span>View Analysis & Open Workspace</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Tips Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">lightbulb</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-label-sm">Pro Tip:</strong> Ensure headers reside in row 1. DataLens automatically converts common date strings (ISO-8601, RFC-2822) into indexed temporal dimensions.
+        </div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Quick-Load Sample Datasets / Pre-configured Demo Templates -->
+<section class="mt-space-2xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Zero-Config Sandbox</span>
+<span class="px-2 py-0.2 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm">Demo Ready</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Or test-drive preloaded curated datasets</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Click any dataset template to instantly generate full exploratory dashboards.</span>
+</div>
+<!-- 3-Column Bento Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Template 1: E-commerce -->
+<div class="group relative rounded-xl bg-surface-container-low/80 backdrop-blur-md p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all duration-200 cursor-pointer shadow-lg hover:-translate-y-1">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">shopping_cart</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">124,500 Rows</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">E-Commerce Omnichannel Sales</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs line-clamp-2">
+            Multi-currency transactions, SKU categories, margin spreads, cohort churn tags, and fulfillment delivery deltas.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container/20 -mx-space-lg px-space-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">table_chart</span>
+<span>24 Columns</span>
+<span class="text-outline">•</span>
+<span>34.2 MB</span>
+</div>
+<span class="font-label-md text-label-md text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            Load <span class="material-symbols-outlined text-sm">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- Template 2: Healthcare Records -->
+<div class="group relative rounded-xl bg-surface-container-low/80 backdrop-blur-md p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all duration-200 cursor-pointer shadow-lg hover:-translate-y-1">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/20 text-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">vital_signs</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">52,140 Rows</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-secondary transition-colors">Clinical & Healthcare Admissions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs line-clamp-2">
+            Anonymized patient vitals, diagnosis codes (ICD-10), readmission telemetry, and triage urgency ratings.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container/20 -mx-space-lg px-space-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">table_chart</span>
+<span>31 Columns</span>
+<span class="text-outline">•</span>
+<span>19.8 MB</span>
+</div>
+<span class="font-label-md text-label-md text-secondary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            Load <span class="material-symbols-outlined text-sm">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- Template 3: IoT Sensor Logs -->
+<div class="group relative rounded-xl bg-surface-container-low/80 backdrop-blur-md p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all duration-200 cursor-pointer shadow-lg hover:-translate-y-1">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">sensors</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">280,000 Rows</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-tertiary transition-colors">Industrial IoT Sensor Stream</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs line-clamp-2">
+            High-frequency temperature sensors, acoustic vibrations, duty cycles, and real-time failure degradation labels.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md bg-surface-container/20 -mx-space-lg px-space-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">table_chart</span>
+<span>12 Columns</span>
+<span class="text-outline">•</span>
+<span>64.1 MB</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            Load <span class="material-symbols-outlined text-sm">chevron_right</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive drag-and-drop highlight simulation
+  const dropzone = document.getElementById('dropzone');
+  const fileInput = document.getElementById('file-input');
+
+  ['dragenter', 'dragover'].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      dropzone.classList.add('bg-surface-container-high/90', 'scale-[1.008]');
+    });
+  });
+
+  ['dragleave', 'drop'].forEach(eventName => {
+    dropzone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      dropzone.classList.remove('bg-surface-container-high/90', 'scale-[1.008]');
+    });
+  });
+
+dropzone.addEventListener('drop', (e) => {
+    const files = e.dataTransfer.files;
+
+    if (files.length > 0) {
+        fileInput.files = files;
+
+        console.log('Selected dropped file:', files[0].name);
+
+        document.getElementById('upload-form').submit();
+    }
+});
+
+ fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+        console.log('Selected file:', e.target.files[0].name);
+
+        // Automatically upload the selected file
+        document.getElementById('upload-form').submit();
+    }
+});
+</script></main></div></body></html>

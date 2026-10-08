@@ -6,11 +6,13 @@ from django.conf.urls.static import static
 from .views import (
     home,
     authentication,
+     logout_user,
     dashboard,
     upload_dataset,
     dataset_preview,
     analysis,
     visualizations,
+    visualization_data,
     insights,
     history,
     reports,
@@ -29,12 +31,21 @@ urlpatterns = [
     path('preview/', dataset_preview, name='dataset_preview'),
     path('analysis/', analysis, name='analysis'),
     path('visualizations/', visualizations, name='visualizations'),
+    path(
+    'api/visualization-data/',
+    visualization_data,
+    name='visualization_data'),
     path('insights/', insights, name='insights'),
     path('history/', history, name='history'),
     path('reports/', reports, name='reports'),
     path('loading/', loading, name='loading'),
     path('empty/', empty, name='empty'),
     path('error/', error, name='error'),
+    path(
+    'logout/',
+    logout_user,
+    name='logout'
+),
 ]
 
 if settings.DEBUG:

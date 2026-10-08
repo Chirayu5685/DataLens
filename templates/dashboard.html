@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","surface-dim":"#0b1326","surface":"#0b1326","inverse-surface":"#dae2fd","primary-fixed":"#dbe1ff","secondary-container":"#03b5d3","surface-container-highest":"#2d3449","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","surface-tint":"#b4c5ff","on-error-container":"#ffdad6","on-surface":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-surface-variant":"#c3c6d7","on-primary-fixed":"#00174b","primary-container":"#2563eb","secondary-fixed-dim":"#4cd7f6","on-tertiary-fixed":"#23005c","secondary-fixed":"#acedff","surface-bright":"#31394d","on-primary-container":"#eeefff","on-secondary":"#003640","on-tertiary":"#3c0091","on-secondary-fixed-variant":"#004e5c","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#5516be","tertiary":"#d0bcff","surface-container-high":"#222a3d","secondary":"#4cd7f6","on-tertiary-container":"#f6edff","tertiary-fixed-dim":"#d0bcff","on-secondary-fixed":"#001f26","inverse-primary":"#0053db","on-error":"#690005","primary":"#b4c5ff","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#e9ddff","outline-variant":"#434655","background":"#0b1326","on-primary":"#002a78","surface-container-low":"#131b2e","surface-container":"#171f33","error":"#ffb4ab","tertiary-container":"#7d4ce7","surface-variant":"#2d3449","on-background":"#dae2fd","outline":"#8d90a0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","gutter-mobile":"0.75rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"metric-display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head>
-<body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md pt-space-lg"><div class="flex items-center gap-space-sm px-space-xs mb-space-lg"><img alt="DataLens Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xep2HctBICippvpUkI3qxHFL9w3Df87DJYU872w88nlF7WmhaDLyiBqYI5GyZNfWwD4Bivxu6qFr2klk3fItDEs6TL2WR88hO6WL8d_JotXXDmefXWb0Fwk15zCgQY1m2UZBJBl1gQMQgAQ2lng5pkl94JrXTc1ACIGIME2mtvDQaXScjCJxEM1gcXpy1RLviV10UKONrMDmq2mePVkeYhzNedy_ITBK9txfDxLWegXA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight">DataLens</span><span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase tracking-wider">Core</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Dataset Intelligence</span></div></div><div class="px-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Platform Navigation</span></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a aria-current="page"
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#93000a","surface-dim":"#0b1326","surface":"#0b1326","inverse-surface":"#dae2fd","primary-fixed":"#dbe1ff","secondary-container":"#03b5d3","surface-container-highest":"#2d3449","surface-container-lowest":"#060e20","on-secondary-container":"#00424e","surface-tint":"#b4c5ff","on-error-container":"#ffdad6","on-surface":"#dae2fd","primary-fixed-dim":"#b4c5ff","on-surface-variant":"#c3c6d7","on-primary-fixed":"#00174b","primary-container":"#2563eb","secondary-fixed-dim":"#4cd7f6","on-tertiary-fixed":"#23005c","secondary-fixed":"#acedff","surface-bright":"#31394d","on-primary-container":"#eeefff","on-secondary":"#003640","on-tertiary":"#3c0091","on-secondary-fixed-variant":"#004e5c","inverse-on-surface":"#283044","on-tertiary-fixed-variant":"#5516be","tertiary":"#d0bcff","surface-container-high":"#222a3d","secondary":"#4cd7f6","on-tertiary-container":"#f6edff","tertiary-fixed-dim":"#d0bcff","on-secondary-fixed":"#001f26","inverse-primary":"#0053db","on-error":"#690005","primary":"#b4c5ff","on-primary-fixed-variant":"#003ea8","tertiary-fixed":"#e9ddff","outline-variant":"#434655","background":"#0b1326","on-primary":"#002a78","surface-container-low":"#131b2e","surface-container":"#171f33","error":"#ffb4ab","tertiary-container":"#7d4ce7","surface-variant":"#2d3449","on-background":"#dae2fd","outline":"#8d90a0"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","margin":"2rem","space-xs":"0.25rem","gutter":"1.5rem","margin-mobile":"1rem","space-md":"1rem","space-2xl":"3rem","gutter-mobile":"0.75rem"},fontFamily:{"label-lg":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"title-md":["Inter"],"headline-md":["Inter"],"metric-display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-display":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+    <aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low/90 backdrop-blur-xl z-50 flex flex-col justify-between shadow-[0_4px_20px_-2px_rgba(0,0,0,0.4)]"><div class="flex flex-col flex-1 overflow-y-auto px-space-md pt-space-lg"><div class="flex items-center gap-space-sm px-space-xs mb-space-lg"><img alt="DataLens Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xep2HctBICippvpUkI3qxHFL9w3Df87DJYU872w88nlF7WmhaDLyiBqYI5GyZNfWwD4Bivxu6qFr2klk3fItDEs6TL2WR88hO6WL8d_JotXXDmefXWb0Fwk15zCgQY1m2UZBJBl1gQMQgAQ2lng5pkl94JrXTc1ACIGIME2mtvDQaXScjCJxEM1gcXpy1RLviV10UKONrMDmq2mePVkeYhzNedy_ITBK9txfDxLWegXA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface tracking-tight">DataLens</span><span class="px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm uppercase tracking-wider">Core</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Dataset Intelligence</span></div></div><div class="px-space-xs mb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Platform Navigation</span></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a aria-current="page"
    class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg transition-all duration-150 bg-primary-container text-on-primary-container font-label-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"
    href="{% url 'dashboard' %}">
     <span class="material-symbols-outlined text-lg">dashboard</span>
@@ -86,19 +89,18 @@
     </div>
 
 </div>
-
 </aside>
 
 <!-- MAIN DASHBOARD -->
 <main class="ml-72 min-h-screen p-space-lg">
-</aside>
-
-<main class="ml-72 min-h-screen p-space-lg">
+     <div class="p-6">
 <!-- Top Greeting & Action Header -->
 <section class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pt-space-md">
 <div class="space-y-1">
 <div class="flex items-center gap-space-xs">
-<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Good morning, Alex</span>
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+    Good morning, {{ request.user.first_name|default:request.user.username }}
+</span>
 <span class="text-2xl animate-bounce">👋</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
@@ -130,10 +132,6 @@
 <span class="material-symbols-outlined text-sm text-outline">expand_more</span>
 </button>
 </div>
-<button class="flex items-center gap-2 h-10 px-4 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-md hover:bg-primary hover:text-on-primary transition-all duration-200" type="button">
-<span class="material-symbols-outlined text-base">cloud_upload</span>
-<span>Upload Dataset</span>
-</button>
 </div>
 </section>
 <!-- 5 Premium Metric Cards -->
@@ -147,10 +145,13 @@
 </div>
 </div>
 <div class="mt-3 flex items-baseline justify-between">
-<span class="font-metric-display text-metric-display text-on-surface tracking-tight">12</span>
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">
+    {{ total_datasets }}
+</span>
 <span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-secondary bg-secondary/10 font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-xs">trending_up</span>+2 this wk
-        </span>
+    <span class="material-symbols-outlined text-xs">database</span>
+    Uploaded
+</span>
 </div>
 <!-- Micro-sparkline -->
 <div class="mt-3 h-7 w-full">
@@ -169,10 +170,17 @@
 </div>
 </div>
 <div class="mt-3 flex items-baseline justify-between">
-<span class="font-metric-display text-metric-display text-on-surface tracking-tight">125,430</span>
-<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-secondary bg-secondary/10 font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-xs">north_east</span>+18.4%
-        </span>
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">
+    {{ total_rows|default:0 }}
+</span><span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-secondary bg-secondary/10 font-label-sm text-label-sm">
+
+    <span class="material-symbols-outlined text-xs">
+        table_rows
+    </span>
+
+    Total rows
+
+</span>
 </div>
 <div class="mt-3 h-7 w-full">
 <svg class="w-full h-full text-primary overflow-visible" fill="none" viewbox="0 0 100 24">
@@ -190,9 +198,11 @@
 </div>
 </div>
 <div class="mt-3 flex items-baseline justify-between">
-<span class="font-metric-display text-metric-display text-on-surface tracking-tight">86</span>
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">
+    {{ total_columns|default:0 }}
+</span>
 <span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-tertiary bg-tertiary-container/20 font-label-sm text-label-sm">
-          100% Typed
+          Dataset columns
         </span>
 </div>
 <div class="mt-3 h-7 w-full">
@@ -211,9 +221,10 @@
 </div>
 </div>
 <div class="mt-3 flex items-baseline justify-between">
-<span class="font-metric-display text-metric-display text-on-surface tracking-tight">24</span>
-<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-secondary bg-secondary/10 font-label-sm text-label-sm">
-          +6 auto
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">
+    {{ total_datasets|default:0 }}
+</span><span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-secondary bg-secondary/10 font-label-sm text-label-sm">
+          Available
         </span>
 </div>
 <div class="mt-3 h-7 w-full">
@@ -232,10 +243,10 @@
 </div>
 </div>
 <div class="mt-3 flex items-baseline justify-between">
-<span class="font-metric-display text-metric-display text-on-surface tracking-tight">94%</span>
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">{{ total_storage|filesizeformat }}</span>
 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-secondary bg-secondary/15 font-label-sm text-label-sm">
 <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
-          Optimal
+          Used
         </span>
 </div>
 <div class="mt-3 h-7 w-full flex items-center">
@@ -245,168 +256,345 @@
 </div>
 </div>
 </section>
-<!-- Analytics Charts Section: 3-column bespoke Bento -->
+<!-- Analytics Charts Section -->
 <section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
-<!-- Left/Main Chart: Activity & Volume (7 cols) -->
-<div class="lg:col-span-6 rounded-xl bg-surface-container-low p-space-lg shadow-md flex flex-col justify-between">
-<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-4">
-<div>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Dataset Activity & Volume</h2>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Daily row parsing velocity & inference workload</p>
+
+    <!-- ===================================================== -->
+    <!-- DATASET ACTIVITY -->
+    <!-- ===================================================== -->
+
+    <div class="lg:col-span-6 rounded-xl bg-surface-container-low
+        p-space-lg shadow-md flex flex-col">
+
+        <div class="flex flex-col sm:flex-row sm:items-center
+            justify-between gap-space-sm mb-4">
+
+            <div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">
+                    Dataset Activity & Volume
+                </h2>
+
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Daily uploaded row volume
+                </p>
+            </div>
+
+            <div class="inline-flex p-1 bg-surface-container
+                rounded-lg self-start sm:self-auto">
+
+                <button
+                    class="px-2.5 py-1 text-on-surface-variant
+                    hover:text-on-surface rounded
+                    font-label-sm text-label-sm transition-colors"
+                    type="button">
+
+                    7D
+
+                </button>
+
+                <button
+                    class="px-2.5 py-1 bg-primary-container
+                    text-on-primary-container
+                    font-label-sm text-label-sm rounded shadow-sm"
+                    type="button">
+
+                    30D
+
+                </button>
+
+                <button
+                    class="px-2.5 py-1 text-on-surface-variant
+                    hover:text-on-surface rounded
+                    font-label-sm text-label-sm transition-colors"
+                    type="button">
+
+                    90D
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Chart -->
+
+        <div class="relative h-64 w-full mt-2">
+
+            <canvas id="activityChart"></canvas>
+
+        </div>
+
+        <div class="flex items-center justify-between pt-3
+            text-on-surface-variant font-label-sm text-label-sm">
+
+            <span>30 Days Ago</span>
+            <span>15 Days Ago</span>
+            <span>Today</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- RECORDS DISTRIBUTION -->
+    <!-- ===================================================== -->
+
+    <div class="lg:col-span-3 rounded-xl bg-surface-container-low
+        p-space-lg shadow-md flex flex-col justify-between">
+
+        <div>
+
+            <div class="flex items-center justify-between mb-1">
+
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">
+                    Records Distribution
+                </h2>
+
+                <span class="material-symbols-outlined
+                    text-outline text-lg">
+
+                    database
+
+                </span>
+
+            </div>
+
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Rows per uploaded dataset
+            </p>
+
+
+            <div class="space-y-4">
+
+                {% for item in records_distribution %}
+
+                <div class="space-y-1.5">
+
+                    <div class="flex justify-between
+                        font-label-sm text-label-sm">
+
+                        <span class="text-on-surface font-medium
+                            truncate max-w-[160px]"
+                            title="{{ item.name }}">
+
+                            {{ item.name }}
+
+                        </span>
+
+                        <span class="text-on-surface-variant whitespace-nowrap">
+
+                            {{ item.rows|default:0 }}
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="h-2 w-full rounded-full
+                        bg-surface-container-highest overflow-hidden">
+<div
+    class="dataset-progress-bar h-full rounded-full
+    bg-primary-container
+    transition-all duration-500"
+    data-percentage="{{ item.percentage|default:'0' }}">
 </div>
-<div class="inline-flex p-1 bg-surface-container rounded-lg self-start sm:self-auto">
-<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface rounded font-label-sm text-label-sm transition-colors" type="button">7D</button>
-<button class="px-2.5 py-1 bg-primary-container text-on-primary-container font-label-sm text-label-sm rounded shadow-sm" type="button">30D</button>
-<button class="px-2.5 py-1 text-on-surface-variant hover:text-on-surface rounded font-label-sm text-label-sm transition-colors" type="button">90D</button>
-</div>
-</div>
-<!-- Area Chart (Polished Inline SVG with interactive visual styling) -->
-<div class="relative h-64 w-full mt-2">
-<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 540 220">
-<defs>
-<lineargradient id="areaGradientPrimary" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#2563eb" stop-opacity="0.45"></stop>
-<stop offset="100%" stop-color="#2563eb" stop-opacity="0.0"></stop>
-</lineargradient>
-<lineargradient id="areaGradientSecondary" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.35"></stop>
-<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
-</lineargradient>
-</defs>
-<!-- Dotted gridlines -->
-<line stroke="#434655" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="540" y1="30" y2="30"></line>
-<line stroke="#434655" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="540" y1="80" y2="80"></line>
-<line stroke="#434655" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="540" y1="130" y2="130"></line>
-<line stroke="#434655" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="540" y1="180" y2="180"></line>
-<!-- Area 1 (Secondary: background baseline) -->
-<path d="M0,170 C60,150 120,165 180,135 C240,105 300,120 360,95 C420,70 480,85 540,60 L540,220 L0,220 Z" fill="url(#areaGradientSecondary)"></path>
-<path d="M0,170 C60,150 120,165 180,135 C240,105 300,120 360,95 C420,70 480,85 540,60" fill="none" stroke="#4cd7f6" stroke-width="2"></path>
-<!-- Area 2 (Primary: foreground volume) -->
-<path d="M0,140 C50,110 110,130 170,90 C230,50 290,80 350,45 C410,20 470,40 540,20 L540,220 L0,220 Z" fill="url(#areaGradientPrimary)"></path>
-<path d="M0,140 C50,110 110,130 170,90 C230,50 290,80 350,45 C410,20 470,40 540,20" fill="none" stroke="#2563eb" stroke-width="2.5"></path>
-<!-- Active point marker -->
-<circle class="filter drop-shadow" cx="350" cy="45" fill="#dae2fd" r="5" stroke="#2563eb" stroke-width="3"></circle>
-</svg>
-<!-- Hover inspection pill -->
-<div class="absolute top-2 left-64 bg-surface-container-high px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-2 pointer-events-none">
-<span class="h-2 w-2 rounded-full bg-primary-container"></span>
-<span class="font-label-sm text-label-sm text-on-surface">Peak: 14.8k rows/hr</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-3 text-on-surface-variant font-label-sm text-label-sm">
-<span>Week 1</span>
-<span>Week 2</span>
-<span>Week 3</span>
-<span>Week 4 (Current)</span>
-</div>
-</div>
-<!-- Middle Chart: Records by Dataset (Horizontal comparative bars) (3 cols) -->
-<div class="lg:col-span-3 rounded-xl bg-surface-container-low p-space-lg shadow-md flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between mb-1">
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Records Distribution</h2>
-<span class="material-symbols-outlined text-outline text-lg">tune</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Volume per major pipeline</p>
-<div class="space-y-4">
-<!-- Item 1 -->
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-medium truncate max-w-[160px]">churn_q3.csv</span>
-<span class="text-on-surface-variant">54.2k (43%)</span>
-</div>
-<div class="h-2 w-full rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-primary-container" style="width: 43%;"></div>
-</div>
-</div>
-<!-- Item 2 -->
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-medium truncate max-w-[160px]">telemetry_2024.xlsx</span>
-<span class="text-on-surface-variant">38.9k (31%)</span>
-</div>
-<div class="h-2 w-full rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-secondary" style="width: 31%;"></div>
-</div>
-</div>
-<!-- Item 3 -->
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-medium truncate max-w-[160px]">sales_v2.csv</span>
-<span class="text-on-surface-variant">21.8k (17%)</span>
-</div>
-<div class="h-2 w-full rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-tertiary" style="width: 17%;"></div>
-</div>
-</div>
-<!-- Item 4 -->
-<div class="space-y-1.5">
-<div class="flex justify-between font-label-sm text-label-sm">
-<span class="text-on-surface font-medium truncate max-w-[160px]">student_eval.csv</span>
-<span class="text-on-surface-variant">10.5k (9%)</span>
-</div>
-<div class="h-2 w-full rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-outline" style="width: 9%;"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pt-4 mt-2 flex items-center justify-between bg-surface-container/40 p-2.5 rounded-lg">
-<span class="font-label-sm text-label-sm text-on-surface-variant">Peak Throughput</span>
-<span class="font-label-md text-label-md text-secondary">⚡ 4.2k ops/sec</span>
-</div>
-</div>
-<!-- Right Chart: Data Types Donut Distribution (3 cols) -->
-<div class="lg:col-span-3 rounded-xl bg-surface-container-low p-space-lg shadow-md flex flex-col justify-between">
-<div>
-<div class="flex items-center justify-between mb-1">
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Data Types</h2>
-<span class="material-symbols-outlined text-outline text-lg">donut_large</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">Field categorization index</p>
-<!-- Donut visual SVG -->
-<div class="relative flex items-center justify-center my-2">
-<svg class="w-36 h-36 -rotate-90 transform" viewbox="0 0 100 100">
-<!-- Background circle -->
-<circle cx="50" cy="50" fill="none" r="38" stroke="#2d3449" stroke-width="12"></circle>
-<!-- Numerical: 48% (circumference ~ 238.7, length = 114.6) -->
-<circle cx="50" cy="50" fill="none" r="38" stroke="#2563eb" stroke-dasharray="114.6 238.7" stroke-dashoffset="0" stroke-width="12"></circle>
-<!-- Categorical: 28% (length = 66.8) -->
-<circle cx="50" cy="50" fill="none" r="38" stroke="#4cd7f6" stroke-dasharray="66.8 238.7" stroke-dashoffset="-114.6" stroke-width="12"></circle>
-<!-- DateTime: 14% (length = 33.4) -->
-<circle cx="50" cy="50" fill="none" r="38" stroke="#d0bcff" stroke-dasharray="33.4 238.7" stroke-dashoffset="-181.4" stroke-width="12"></circle>
-<!-- Boolean: 10% (length = 23.9) -->
-<circle cx="50" cy="50" fill="none" r="38" stroke="#8d90a0" stroke-dasharray="23.9 238.7" stroke-dashoffset="-214.8" stroke-width="12"></circle>
-</svg>
-<div class="absolute flex flex-col items-center">
-<span class="font-headline-md text-headline-md text-on-surface font-bold">86</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Fields</span>
-</div>
-</div>
-<!-- Legend list -->
-<div class="grid grid-cols-2 gap-2 pt-2">
-<div class="flex items-center gap-1.5">
-<span class="h-2.5 w-2.5 rounded-full bg-primary-container"></span>
-<span class="font-label-sm text-label-sm text-on-surface">Numeric (48%)</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="h-2.5 w-2.5 rounded-full bg-secondary"></span>
-<span class="font-label-sm text-label-sm text-on-surface">Categ. (28%)</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="h-2.5 w-2.5 rounded-full bg-tertiary"></span>
-<span class="font-label-sm text-label-sm text-on-surface">DateTime (14%)</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="h-2.5 w-2.5 rounded-full bg-outline"></span>
-<span class="font-label-sm text-label-sm text-on-surface">Boolean (10%)</span>
-</div>
-</div>
-</div>
-<div class="pt-2 text-center">
-<span class="font-label-sm text-label-sm text-outline">Schema drift detection: Normal</span>
-</div>
-</div>
+
+                    </div>
+
+                </div>
+
+                {% empty %}
+
+                <div class="py-8 text-center">
+
+                    <span class="material-symbols-outlined
+                        text-3xl text-outline">
+
+                        database
+
+                    </span>
+
+                    <p class="mt-2 text-sm text-on-surface-variant">
+
+                        No datasets available
+
+                    </p>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <div class="pt-4 mt-2 flex items-center justify-between
+            bg-surface-container/40 p-2.5 rounded-lg">
+
+            <span class="font-label-sm text-label-sm
+                text-on-surface-variant">
+
+                Peak Daily Volume
+
+            </span>
+
+            <span class="font-label-md text-label-md text-secondary">
+
+                {{ peak_rows|default:0 }} rows
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- DATA TYPES -->
+    <!-- ===================================================== -->
+
+    <div class="lg:col-span-3 rounded-xl bg-surface-container-low
+        p-space-lg shadow-md flex flex-col justify-between">
+
+        <div>
+
+            <div class="flex items-center justify-between mb-1">
+
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">
+                    Data Types
+                </h2>
+
+                <span class="material-symbols-outlined
+                    text-outline text-lg">
+
+                    donut_large
+
+                </span>
+
+            </div>
+
+            <p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+
+                Field categorization index
+
+            </p>
+
+
+            <!-- Donut -->
+
+            <div class="relative flex items-center
+                justify-center my-2">
+
+                <div class="w-36 h-36">
+
+                    <canvas id="dataTypeChart"></canvas>
+
+                </div>
+
+                <div class="absolute flex flex-col items-center">
+
+                    <span class="font-headline-md text-headline-md
+                        text-on-surface font-bold">
+
+                        {{ total_data_type_fields|default:0 }}
+
+                    </span>
+
+                    <span class="font-label-sm text-label-sm
+                        text-on-surface-variant">
+
+                        Fields
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Legend -->
+
+            <div class="grid grid-cols-2 gap-2 pt-2">
+
+                <div class="flex items-center gap-1.5">
+
+                    <span class="h-2.5 w-2.5 rounded-full
+                        bg-primary-container">
+                    </span>
+
+                    <span class="font-label-sm text-label-sm text-on-surface">
+
+                        Numeric
+                        ({{ data_type_percentages.Numeric|default:0 }}%)
+
+                    </span>
+
+                </div>
+
+
+                <div class="flex items-center gap-1.5">
+
+                    <span class="h-2.5 w-2.5 rounded-full bg-secondary">
+                    </span>
+
+                    <span class="font-label-sm text-label-sm text-on-surface">
+
+                        Categorical
+                        ({{ data_type_percentages.Categorical|default:0 }}%)
+
+                    </span>
+
+                </div>
+
+
+                <div class="flex items-center gap-1.5">
+
+                    <span class="h-2.5 w-2.5 rounded-full bg-tertiary">
+                    </span>
+
+                    <span class="font-label-sm text-label-sm text-on-surface">
+
+                        DateTime
+                        ({{ data_type_percentages.DateTime|default:0 }}%)
+
+                    </span>
+
+                </div>
+
+
+                <div class="flex items-center gap-1.5">
+
+                    <span class="h-2.5 w-2.5 rounded-full bg-outline">
+                    </span>
+
+                    <span class="font-label-sm text-label-sm text-on-surface">
+
+                        Boolean
+                        ({{ data_type_percentages.Boolean|default:0 }}%)
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="pt-2 text-center">
+
+            <span class="font-label-sm text-label-sm text-outline">
+
+                Based on uploaded dataset schemas
+
+            </span>
+
+        </div>
+
+    </div>
+
 </section>
 <!-- Recent Datasets Section with Data Table -->
 <section class="rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md">
@@ -451,199 +639,377 @@
 </tr>
 </thead>
 <tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
-<!-- Row 1: customer_churn_q3.csv -->
+
+{% for dataset in datasets %}
+
 <tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4 font-medium">
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary-container/20 text-primary uppercase font-bold">CSV</span>
-<span class="text-on-surface hover:text-secondary cursor-pointer transition-colors">customer_churn_q3.csv</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant">54,200</td>
-<td class="py-3.5 px-4 text-on-surface-variant">24</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-2">
-<span class="font-label-md text-label-md font-semibold text-secondary">98%</span>
-<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-secondary" style="width: 98%;"></div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-secondary bg-secondary/15 font-label-sm text-label-sm shadow-[0_0_12px_rgba(76,215,246,0.25)]">
-<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
-                Analyzed
-              </span>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant font-label-sm text-label-sm">12 mins ago</td>
-<td class="py-3.5 px-4 text-right">
-<div class="inline-flex items-center gap-1">
-<a href="{% url 'dataset_preview' %}"
-   class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-   title="View Details">
-    <span class="material-symbols-outlined text-base">visibility</span>
-</a>
-<a href="{% url 'analysis' %}"
-   class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"
-   title="Run Analysis">
-    <span class="material-symbols-outlined text-base">query_stats</span>
-</a>
-<a href="{% url 'analysis' %}"
-   class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"
-   title="Export">
-    <span class="material-symbols-outlined text-base">file_download</span>
-</a>
-<a href="{% url 'analysis' %}"
-   class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors"
-   title="Delete Dataset">
-    <span class="material-symbols-outlined text-base">delete</span>
-</a>
-</div>
-</td>
+
+    <!-- Dataset Name -->
+    <td class="py-3.5 px-4 font-medium">
+        <div class="flex items-center gap-2">
+
+            <span class="px-2 py-0.5 rounded font-label-sm text-label-sm
+                bg-primary-container/20 text-primary uppercase font-bold">
+
+                {% if ".xlsx" in dataset.name|lower %}
+                    XLSX
+                {% elif ".xls" in dataset.name|lower %}
+                    XLS
+                {% else %}
+                    CSV
+                {% endif %}
+
+            </span>
+
+            <span class="text-on-surface">
+                {{ dataset.name }}
+            </span>
+
+        </div>
+    </td>
+
+    <!-- Rows -->
+    <td class="py-3.5 px-4 text-on-surface-variant">
+        {{ dataset.rows|default:0 }}
+    </td>
+
+    <!-- Columns -->
+    <td class="py-3.5 px-4 text-on-surface-variant">
+        {{ dataset.columns|default:0 }}
+    </td>
+
+    <!-- Quality -->
+    <td class="py-3.5 px-4">
+
+        <span class="text-on-surface-variant">
+            Analysis available
+        </span>
+
+    </td>
+
+    <!-- Status -->
+    <td class="py-3.5 px-4">
+
+        <span class="inline-flex items-center gap-1.5
+            px-2.5 py-1 rounded-full
+            text-secondary bg-secondary/15
+            font-label-sm text-label-sm">
+
+            <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+
+            Uploaded
+
+        </span>
+
+    </td>
+
+    <!-- Uploaded -->
+    <td class="py-3.5 px-4 text-on-surface-variant
+        font-label-sm text-label-sm">
+
+        {{ dataset.uploaded_at|date:"d M Y, H:i" }}
+
+    </td>
+
+    <!-- Actions -->
+    <td class="py-3.5 px-4 text-right">
+
+        <div class="inline-flex items-center gap-1">
+
+            <!-- Preview -->
+            <a
+                href="{% url 'dataset_preview' %}?dataset={{ dataset.id }}"
+                class="p-1 rounded text-on-surface-variant
+                hover:text-on-surface hover:bg-surface-container
+                transition-colors"
+                title="View Dataset">
+
+                <span class="material-symbols-outlined text-base">
+                    visibility
+                </span>
+
+            </a>
+
+            <!-- Analysis -->
+            <a
+                href="{% url 'analysis' %}?dataset={{ dataset.id }}"
+                class="p-1 rounded text-on-surface-variant
+                hover:text-primary hover:bg-surface-container
+                transition-colors"
+                title="Analyze Dataset">
+
+                <span class="material-symbols-outlined text-base">
+                    query_stats
+                </span>
+
+            </a>
+
+            <!-- Report -->
+            <a
+                href="{% url 'reports' %}?dataset={{ dataset.id }}"
+                class="p-1 rounded text-on-surface-variant
+                hover:text-secondary hover:bg-surface-container
+                transition-colors"
+                title="Generate Report">
+
+                <span class="material-symbols-outlined text-base">
+                    description
+                </span>
+
+            </a>
+
+        </div>
+
+    </td>
+
 </tr>
-<!-- Row 2: sensor_telemetry_2024.xlsx -->
-<tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4 font-medium">
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-container/30 text-tertiary uppercase font-bold">XLS</span>
-<span class="text-on-surface hover:text-secondary cursor-pointer transition-colors">sensor_telemetry_2024.xlsx</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant">38,910</td>
-<td class="py-3.5 px-4 text-on-surface-variant">32</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-2">
-<span class="font-label-md text-label-md font-semibold text-primary">89%</span>
-<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-primary-container" style="width: 89%;"></div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-primary bg-primary-container/20 font-label-sm text-label-sm">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
-                Processing
-              </span>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant font-label-sm text-label-sm">Just now</td>
-<td class="py-3.5 px-4 text-right">
-<div class="inline-flex items-center gap-1">
-<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View Details" type="button">
-<span class="material-symbols-outlined text-base">visibility</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Run Analysis" type="button">
-<span class="material-symbols-outlined text-base">query_stats</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" title="Export" type="button">
-<span class="material-symbols-outlined text-base">file_download</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors" title="Delete Dataset" type="button">
-<span class="material-symbols-outlined text-base">delete</span>
-</button>
-</div>
-</td>
+
+{% empty %}
+
+<tr>
+
+    <td colspan="7" class="py-12 text-center">
+
+        <div class="flex flex-col items-center gap-3">
+
+            <span class="material-symbols-outlined text-4xl text-outline">
+                database
+            </span>
+
+            <p class="text-on-surface font-semibold">
+                No datasets uploaded yet
+            </p>
+
+            <p class="text-on-surface-variant text-sm">
+                Upload your first dataset to start analyzing it.
+            </p>
+
+            <a
+                href="{% url 'upload_dataset' %}"
+                class="mt-2 px-4 py-2 rounded-lg
+                bg-primary-container text-on-primary-container">
+
+                Upload Dataset
+
+            </a>
+
+        </div>
+
+    </td>
+
 </tr>
-<!-- Row 3: sales_transactions_v2.csv -->
-<tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4 font-medium">
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary-container/20 text-primary uppercase font-bold">CSV</span>
-<span class="text-on-surface hover:text-secondary cursor-pointer transition-colors">sales_transactions_v2.csv</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant">21,800</td>
-<td class="py-3.5 px-4 text-on-surface-variant">18</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-2">
-<span class="font-label-md text-label-md font-semibold text-secondary">96%</span>
-<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-secondary" style="width: 96%;"></div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-secondary bg-secondary/15 font-label-sm text-label-sm shadow-[0_0_12px_rgba(76,215,246,0.25)]">
-<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
-                Analyzed
-              </span>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant font-label-sm text-label-sm">2 hours ago</td>
-<td class="py-3.5 px-4 text-right">
-<div class="inline-flex items-center gap-1">
-<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View Details" type="button">
-<span class="material-symbols-outlined text-base">visibility</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Run Analysis" type="button">
-<span class="material-symbols-outlined text-base">query_stats</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" title="Export" type="button">
-<span class="material-symbols-outlined text-base">file_download</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors" title="Delete Dataset" type="button">
-<span class="material-symbols-outlined text-base">delete</span>
-</button>
-</div>
-</td>
-</tr>
-<!-- Row 4: student_performance_eval.csv -->
-<tr class="hover:bg-surface-container/60 transition-colors">
-<td class="py-3.5 px-4 font-medium">
-<div class="flex items-center gap-2">
-<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary-container/20 text-primary uppercase font-bold">CSV</span>
-<span class="text-on-surface hover:text-secondary cursor-pointer transition-colors">student_performance_eval.csv</span>
-</div>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant">10,520</td>
-<td class="py-3.5 px-4 text-on-surface-variant">12</td>
-<td class="py-3.5 px-4">
-<div class="flex items-center gap-2">
-<span class="font-label-md text-label-md font-semibold text-error">72%</span>
-<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full rounded-full bg-error" style="width: 72%;"></div>
-</div>
-</div>
-</td>
-<td class="py-3.5 px-4">
-<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-error bg-error-container/40 font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-xs">warning</span>
-                Needs Review
-              </span>
-</td>
-<td class="py-3.5 px-4 text-on-surface-variant font-label-sm text-label-sm">Yesterday</td>
-<td class="py-3.5 px-4 text-right">
-<div class="inline-flex items-center gap-1">
-<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="View Details" type="button">
-<span class="material-symbols-outlined text-base">visibility</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Run Analysis" type="button">
-<span class="material-symbols-outlined text-base">query_stats</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-secondary hover:bg-surface-container transition-colors" title="Export" type="button">
-<span class="material-symbols-outlined text-base">file_download</span>
-</button>
-<button class="p-1 rounded text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors" title="Delete Dataset" type="button">
-<span class="material-symbols-outlined text-base">delete</span>
-</button>
-</div>
-</td>
-</tr>
+
+{% endfor %}
+
 </tbody>
 </table>
 </div>
 <!-- Table Footer / Pagination Metadata -->
 <div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-2 text-on-surface-variant font-body-sm text-body-sm">
-<span>Showing <strong class="text-on-surface">4</strong> of <strong class="text-on-surface">12</strong> active datasets</span>
-<div class="inline-flex items-center gap-1">
-<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" disabled="" type="button">Previous</button>
-<button class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm" type="button">1</button>
-<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">2</button>
-<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">3</button>
-<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">Next</button>
+<span>
+    Showing
+    <strong class="text-on-surface">
+        {{ datasets|length }}
+    </strong>
+    of
+    <strong class="text-on-surface">
+        {{ total_datasets }}
+    </strong>
+    datasets
+</span>
+<div class="text-xs text-on-surface-variant">
+    Showing the 5 most recently uploaded datasets
 </div>
 </div>
 </section>
-</div></main></div>
+</div></main>
+{{ activity_labels|json_script:"activity-labels" }}
+{{ activity_values|json_script:"activity-values" }}
+{{ data_types|json_script:"data-types-data" }}
+<script>
+const activityLabelsElement =
+    document.getElementById('activity-labels');
+
+const activityValuesElement =
+    document.getElementById('activity-values');
+
+
+const activityLabels =
+    activityLabelsElement
+        ? JSON.parse(
+            activityLabelsElement.textContent || '[]'
+        )
+        : [];
+
+
+const activityValues =
+    activityValuesElement
+        ? JSON.parse(
+            activityValuesElement.textContent || '[]'
+        )
+        : [];
+    const dataTypeElement =
+        document.getElementById('data-types-data');
+    /* ================================
+       DATASET ACTIVITY CHART
+       ================================ */
+
+    const activityCanvas =
+        document.getElementById('activityChart');
+
+    if (activityCanvas) {
+        new Chart(activityCanvas, {
+            type: 'line',
+
+            data: {
+                labels: activityLabels,
+
+                datasets: [{
+                    label: 'Rows Uploaded',
+                    data: activityValues,
+
+                    borderColor: '#4cd7f6',
+                    backgroundColor: 'rgba(76, 215, 246, 0.12)',
+
+                    borderWidth: 2.5,
+
+                    pointBackgroundColor: '#4cd7f6',
+                    pointBorderColor: '#4cd7f6',
+
+                    pointRadius: 3,
+                    pointHoverRadius: 6,
+
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
+
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y + ' rows uploaded';
+                            }
+                        }
+                    }
+                },
+
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+
+                        ticks: {
+                            color: '#8d90a0',
+                            maxTicksLimit: 6
+                        }
+                    },
+
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            color: '#8d90a0',
+                            precision: 0
+                        },
+
+                        grid: {
+                            color: 'rgba(141, 144, 160, 0.12)'
+                        }
+                    }
+                }
+            }
+        });
+    }
+    let dataTypes = {};
+
+    if (dataTypeElement) {
+        try {
+            dataTypes =
+                JSON.parse(
+                    dataTypeElement.textContent || '{}'
+                ) || {};
+        } catch (error) {
+            console.error(
+                'Unable to read data type information:',
+                error
+            );
+            dataTypes = {};
+        }
+    }
+
+
+    const dataTypeCanvas =
+        document.getElementById('dataTypeChart');
+
+
+    if (dataTypeCanvas) {
+
+        new Chart(dataTypeCanvas, {
+
+            type: 'doughnut',
+
+            data: {
+
+                labels: [
+                    'Numeric',
+                    'Categorical',
+                    'DateTime',
+                    'Boolean'
+                ],
+
+                datasets: [{
+
+                    data: [
+                        Number(dataTypes.Numeric || 0),
+                        Number(dataTypes.Categorical || 0),
+                        Number(dataTypes.DateTime || 0),
+                        Number(dataTypes.Boolean || 0)
+                    ],
+
+                    borderWidth: 0,
+
+                    hoverOffset: 5
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                cutout: '70%',
+
+                plugins: {
+
+                    legend: {
+                        display: false
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+</script>
 </body></html>

@@ -87,8 +87,7 @@
   <div class="min-h-screen flex">
 
     <!-- ================= SIDEBAR ================= -->
-    <aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low border-r border-outline-variant/30 z-50">
-
+<aside class="fixed left-0 top-0 bottom-0 w-64 bg-surface-container-low border-r border-outline-variant/30 z-50 overflow-y-auto">
         <!-- Logo -->
         <div class="flex items-center gap-3 px-5 py-5 border-b border-outline-variant/20">
 
@@ -177,9 +176,54 @@
                 <span>History</span>
             </a>
 
+      
         </nav>
 
+        <!-- ================= USER PROFILE ================= -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-outline-variant/30 bg-surface-container-low">
+
+            <div class="flex items-center gap-3 min-w-0">
+
+                <!-- Avatar with user initials -->
+                <div class="w-10 h-10 shrink-0 rounded-full bg-primary-container text-primary flex items-center justify-center font-bold text-sm uppercase">
+                    {% if request.user.first_name %}
+                        {{ request.user.first_name|slice:":1" }}{% if request.user.last_name %}{{ request.user.last_name|slice:":1" }}{% endif %}
+                    {% else %}
+                        {{ request.user.username|slice:":1" }}
+                    {% endif %}
+                </div>
+
+                <!-- User Details -->
+                <div class="min-w-0 flex-1">
+                    <p class="text-sm font-semibold text-on-surface truncate">
+                        {% if request.user.get_full_name %}
+                            {{ request.user.get_full_name }}
+                        {% else %}
+                            {{ request.user.username }}
+                        {% endif %}
+                    </p>
+
+                    <p class="text-xs text-on-surface-variant truncate">
+                        {{ request.user.email|default:"Email not added" }}
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Existing Logout Route -->
+            <form method="POST" action="{% url 'logout' %}" class="mt-3">
+                {% csrf_token %}
+                <button type="submit"
+                    class="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-red-400 hover:bg-red-500/10 transition-all">
+                    <span class="material-symbols-outlined text-lg">logout</span>
+                    <span class="text-sm font-medium">Logout</span>
+                </button>
+            </form>
+
+        </div>
+
     </aside>
+
 
     <!-- ================= MAIN CONTENT ================= -->
 

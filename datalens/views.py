@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from collections import defaultdict
 from datetime import timedelta
-
+import uuid
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -465,7 +465,6 @@ def upload_dataset(request):
                 request,
                 f'Unable to process the dataset: {str(e)}'
             )
-
             return render(request, 'upload.html')
 
     return render(request, 'upload.html')
@@ -1011,6 +1010,39 @@ def dataset_preview(request):
             'upload_dataset'
         )  
 @login_required(login_url='authentication')
+def delete_dataset(request, dataset_id):
+    if request.method != 'POST':
+        messages.error(request, 'Invalid request.')
+        return redirect('history')
+
+    dataset = Dataset.objects.filter(
+        id=dataset_id,
+        user=request.user
+    ).first()
+
+    if dataset is None:
+        messages.error(request, 'Dataset not found or access denied.')
+        return redirect('history')
+
+    dataset_name = dataset.name
+
+    # Delete the database record and its associated uploaded file.
+    dataset.file.delete(save=False)
+    dataset.delete()
+
+    if request.session.get('dataset_id') == dataset_id:
+        request.session.pop('dataset_id', None)
+        request.session.pop('dataset_name', None)
+        request.session.pop('dataset_path', None)
+
+    messages.success(
+        request,
+        f'Dataset "{dataset_name}" was deleted successfully.'
+    )
+    return redirect('history')
+
+
+@login_required(login_url='authentication')
 def analysis(request):
 
     dataset = get_selected_dataset(request)
@@ -1027,98 +1059,440 @@ def analysis(request):
         file_path = dataset.file.path
         extension = os.path.splitext(dataset.name)[1].lower()
 
-        # Read dataset
+        # --------------------------------------------------
+        # READ DATASET
+        # --------------------------------------------------
+
         if extension == '.csv':
             df = pd.read_csv(file_path)
         else:
             df = pd.read_excel(file_path)
 
-        # Basic statistics
+        # --------------------------------------------------
+        # BASIC STATISTICS
+        # --------------------------------------------------
+
         total_rows = len(df)
         total_columns = len(df.columns)
         total_cells = total_rows * total_columns
 
-        # Missing values
-        total_missing = int(df.isna().sum().sum())
+        # --------------------------------------------------
+        # MISSING VALUES
+        # --------------------------------------------------
 
-        # Duplicate rows
-        duplicate_rows = int(df.duplicated().sum())
+        total_missing = int(
+            df.isna().sum().sum()
+        )
 
-        # Numeric and categorical columns
+        # --------------------------------------------------
+        # DUPLICATE ROWS
+        # --------------------------------------------------
+
+        duplicate_rows = int(
+            df.duplicated().sum()
+        )
+
+       # --------------------------------------------------
+        # COLUMN TYPES
+        # --------------------------------------------------
+
         numeric_columns = df.select_dtypes(
             include='number'
         ).columns.tolist()
 
-        categorical_columns = df.select_dtypes(
-            exclude='number'
+        datetime_columns = df.select_dtypes(
+            include=['datetime', 'datetimetz']
         ).columns.tolist()
 
-        # Data quality percentage
+        boolean_columns = df.select_dtypes(
+            include='bool'
+        ).columns.tolist()
+
+        categorical_columns = [
+            column
+            for column in df.columns
+            if column not in numeric_columns
+            and column not in datetime_columns
+            and column not in boolean_columns
+        ]
+        numeric_count = len(numeric_columns)
+        categorical_count = len(categorical_columns)
+        datetime_count = len(datetime_columns)
+        boolean_count = len(boolean_columns)
+
+        # --------------------------------------------------
+        # CORRELATION MATRIX
+        # --------------------------------------------------
+
+        correlation_columns = numeric_columns[:8]
+
+        correlation_matrix = []
+
+        strongest_positive = None
+        strongest_negative = None
+
+        if len(correlation_columns) >= 2:
+
+            corr_df = df[correlation_columns].corr()
+
+            # Build matrix for template
+            for row_column in correlation_columns:
+
+                row = {
+                    'name': row_column,
+                    'values': []
+                }
+
+                for column in correlation_columns:
+
+                    value = corr_df.loc[row_column, column]
+
+                    if pd.isna(value):
+                        value = None
+                    else:
+                        value = round(float(value), 2)
+
+                    row['values'].append(value)
+
+                correlation_matrix.append(row)
+
+            # Find strongest positive and negative relationships
+            for i in range(len(correlation_columns)):
+
+                for j in range(i + 1, len(correlation_columns)):
+
+                    column_a = correlation_columns[i]
+                    column_b = correlation_columns[j]
+
+                    value = corr_df.loc[column_a, column_b]
+
+                    if pd.notna(value):
+
+                        value = float(value)
+
+                        # Strongest positive
+                        if value > 0:
+
+                            if (
+                                strongest_positive is None
+                                or value > strongest_positive['value']
+                            ):
+                                strongest_positive = {
+                                    'column_a': column_a,
+                                    'column_b': column_b,
+                                    'value': round(value, 2)
+                                }
+
+                        # Strongest negative
+                        if value < 0:
+
+                            if (
+                                strongest_negative is None
+                                or value < strongest_negative['value']
+                            ):
+                                strongest_negative = {
+                                    'column_a': column_a,
+                                    'column_b': column_b,
+                                    'value': round(value, 2)
+                                }
+        # --------------------------------------------------
+        # DATA QUALITY
+        # --------------------------------------------------
+
         if total_cells > 0:
             quality_score = round(
-                ((total_cells - total_missing) / total_cells) * 100,
+                (
+                    (total_cells - total_missing)
+                    / total_cells
+                ) * 100,
                 2
             )
         else:
             quality_score = 100
 
-        # Column statistics
+        # --------------------------------------------------
+        # COLUMN STATISTICS
+        # --------------------------------------------------
+
         analysis_columns = []
 
         for column in df.columns:
 
             series = df[column]
+
+            # Missing count
+            missing_count = int(
+                series.isna().sum()
+            )
+
+            # Missing percentage
+            missing_percent = (
+                (missing_count / total_rows) * 100
+                if total_rows > 0
+                else 0
+            )
+
+            # Basic information
             info = {
-                    'name': column,
-                        'dtype': str(series.dtype),
-                        'missing': int(series.isna().sum()),
-                        'unique': int(series.nunique()),
-                        'non_null': int(series.notna().sum()),
-                        'is_numeric': pd.api.types.is_numeric_dtype(series),
-                    }
+                'name': column,
+
+                'dtype': str(
+                    series.dtype
+                ),
+
+                'missing': missing_count,
+
+                'missing_percent': round(
+                    missing_percent,
+                    2
+                ),
+
+                'unique': int(
+                    series.nunique()
+                ),
+
+                'non_null': int(
+                    series.notna().sum()
+                ),
+
+                'is_numeric': (
+                    pd.api.types.is_numeric_dtype(
+                        series
+                    )
+                ),
+
+                'min': None,
+                'max': None,
+                'mean': None,
+                'median': None,
+                'std': None,
+                'skewness': None,
+            }
+
+            # --------------------------------------------------
+            # NUMERIC STATISTICS
+            # --------------------------------------------------
 
             if pd.api.types.is_numeric_dtype(series):
 
-                clean = series.dropna()
+                clean = (
+                    pd.to_numeric(
+                        series,
+                        errors='coerce'
+                    )
+                    .dropna()
+                )
 
                 if not clean.empty:
-                    info.update({
-                        'min': round(float(clean.min()), 2),
-                        'max': round(float(clean.max()), 2),
-                        'mean': round(float(clean.mean()), 2),
-                        'median': round(float(clean.median()), 2),
-                        'std': round(float(clean.std()), 2),
-                    })
-                else:
-                    info.update({
-                        'min': None,
-                        'max': None,
-                        'mean': None,
-                        'median': None,
-                        'std': None,
-                    })
 
+                    # Calculate skewness safely
+                    if len(clean) >= 3:
+
+                        skewness_value = clean.skew()
+
+                        if pd.notna(skewness_value):
+                            skewness_value = round(
+                                float(skewness_value),
+                                3
+                            )
+                        else:
+                            skewness_value = 0.0
+
+                    else:
+                        skewness_value = None
+
+                    info.update({
+
+                        'min': round(
+                            float(clean.min()),
+                            2
+                        ),
+
+                        'max': round(
+                            float(clean.max()),
+                            2
+                        ),
+
+                        'mean': round(
+                            float(clean.mean()),
+                            2
+                        ),
+
+                        'median': round(
+                            float(clean.median()),
+                            2
+                        ),
+
+                        'std': round(
+                            float(clean.std()),
+                            2
+                        ),
+
+                        'skewness': skewness_value,
+                        })
             analysis_columns.append(info)
+                    # --------------------------------------------------
+        # DYNAMIC DISTRIBUTION DATA
+        # --------------------------------------------------
+
+        distribution_data = []
+
+        for column in numeric_columns[:2]:
+
+            series = pd.to_numeric(
+                df[column],
+                errors='coerce'
+            ).dropna()
+
+            if series.empty:
+                continue
+
+            # Basic statistics
+            minimum = float(series.min())
+            maximum = float(series.max())
+            median = float(series.median())
+            mean = float(series.mean())
+
+            # Standard deviation
+            std = float(series.std()) if len(series) > 1 else 0
+
+            # Detect distribution shape
+            if std == 0:
+                distribution_type = "Constant"
+            else:
+                skewness = float(series.skew())
+
+                if skewness > 0.5:
+                    distribution_type = "Right-Skewed"
+                elif skewness < -0.5:
+                    distribution_type = "Left-Skewed"
+                else:
+                    distribution_type = "Approximately Symmetric"
+
+            # --------------------------------------------------
+            # HISTOGRAM
+            # --------------------------------------------------
+
+            histogram = []
+
+            if minimum == maximum:
+
+                histogram = [100]
+
+            else:
+
+                counts, _ = np.histogram(
+                    series,
+                    bins=12
+                )
+
+                max_count = counts.max()
+
+                if max_count > 0:
+
+                    histogram = [
+                        round(
+                            (count / max_count) * 100,
+                            2
+                        )
+                        for count in counts
+                    ]
+
+            distribution_data.append({
+
+                'name': column,
+
+                'min': round(
+                    minimum,
+                    2
+                ),
+
+                'median': round(
+                    median,
+                    2
+                ),
+
+                'max': round(
+                    maximum,
+                    2
+                ),
+
+                'mean': round(
+                    mean,
+                    2
+                ),
+
+                'distribution_type':
+                    distribution_type,
+
+                'histogram':
+                    histogram,
+
+                'count':
+                    int(len(series)),
+            })
+
+        # --------------------------------------------------
+        # CONTEXT
+        # --------------------------------------------------
 
         context = {
+
             'dataset': dataset,
 
-            'total_rows': total_rows,
-            'total_columns': total_columns,
-            'total_cells': total_cells,
+            'total_rows':
+                total_rows,
 
-            'total_missing': total_missing,
-            'duplicate_rows': duplicate_rows,
+            'total_columns':
+                total_columns,
 
-            'numeric_count': len(numeric_columns),
-            'categorical_count': len(categorical_columns),
+            'total_cells':
+                total_cells,
 
-            'quality_score': quality_score,
+            'total_missing':
+                total_missing,
 
-            'numeric_columns': numeric_columns,
-            'categorical_columns': categorical_columns,
+            'duplicate_rows':
+                duplicate_rows,
 
-            'analysis_columns': analysis_columns,
+            'numeric_count':
+                numeric_count,
+
+            'categorical_count':
+                categorical_count,
+
+            'datetime_count':
+                datetime_count,
+
+            'boolean_count':
+                boolean_count,
+
+            'quality_score':
+                quality_score,
+
+            'numeric_columns':
+                numeric_columns,
+
+            'categorical_columns':
+                categorical_columns,
+
+            'analysis_columns':
+                analysis_columns,
+
+            'correlation_columns':
+                correlation_columns,
+
+            'correlation_matrix':
+                correlation_matrix,
+
+            'strongest_positive':
+                strongest_positive,
+
+            'strongest_negative':
+                strongest_negative,
+
+                'distribution_data':
+                    distribution_data,
         }
 
         return render(
@@ -1128,16 +1502,303 @@ def analysis(request):
         )
 
     except Dataset.DoesNotExist:
-        messages.error(request, 'Dataset not found.')
-        return redirect('upload_dataset')
+
+        messages.error(
+            request,
+            'Dataset not found.'
+        )
+
+        return redirect(
+            'upload_dataset'
+        )
 
     except Exception as e:
+
         messages.error(
             request,
             f'Unable to analyze dataset: {str(e)}'
         )
-        return redirect('dataset_preview')
 
+        return redirect(
+            'dataset_preview'
+        )
+@login_required(login_url='authentication')
+def impute_nulls(request):
+
+    if request.method != 'POST':
+        messages.error(
+            request,
+            'Invalid request.'
+        )
+        return redirect('analysis')
+
+    dataset_id = request.POST.get('dataset_id')
+
+    if not dataset_id:
+        messages.error(
+            request,
+            'No dataset was selected.'
+        )
+        return redirect('analysis')
+
+    try:
+
+        # --------------------------------------------------
+        # GET DATASET
+        # --------------------------------------------------
+
+        dataset = Dataset.objects.filter(
+            id=dataset_id,
+            user=request.user
+        ).first()
+
+        if not dataset:
+            messages.error(
+                request,
+                'Dataset not found.'
+            )
+            return redirect('analysis')
+
+
+        # --------------------------------------------------
+        # READ DATASET
+        # --------------------------------------------------
+
+        file_path = dataset.file.path
+        extension = os.path.splitext(
+            dataset.name
+        )[1].lower()
+
+        if extension == '.csv':
+
+            df = pd.read_csv(
+                file_path
+            )
+
+        elif extension in ['.xlsx', '.xls']:
+
+            df = pd.read_excel(
+                file_path
+            )
+
+        else:
+
+            messages.error(
+                request,
+                'Unsupported dataset format.'
+            )
+
+            return redirect('analysis')
+
+
+        # --------------------------------------------------
+        # CHECK MISSING VALUES
+        # --------------------------------------------------
+
+        missing_before = int(
+            df.isna().sum().sum()
+        )
+
+        if missing_before == 0:
+
+            messages.info(
+                request,
+                'No missing values were found in this dataset.'
+            )
+
+            return redirect('analysis')
+
+
+        # --------------------------------------------------
+        # IMPUTATION
+        # --------------------------------------------------
+
+        imputed_columns = []
+
+        for column in df.columns:
+
+            missing_count = int(
+                df[column].isna().sum()
+            )
+
+            if missing_count == 0:
+                continue
+
+
+            # ----------------------------------------------
+            # NUMERIC → MEDIAN
+            # ----------------------------------------------
+
+            if pd.api.types.is_numeric_dtype(
+                df[column]
+            ):
+
+                median_value = df[column].median()
+
+                if pd.notna(median_value):
+
+                    df[column] = df[column].fillna(
+                        median_value
+                    )
+
+                    imputed_columns.append({
+                        'column': column,
+                        'method': 'Median',
+                        'value': round(
+                            float(median_value),
+                            4
+                        ),
+                        'count': missing_count,
+                    })
+
+
+            # ----------------------------------------------
+            # CATEGORICAL → MODE
+            # ----------------------------------------------
+
+            else:
+
+                mode_values = df[column].mode(
+                    dropna=True
+                )
+
+                if not mode_values.empty:
+
+                    mode_value = mode_values.iloc[0]
+
+                    df[column] = df[column].fillna(
+                        mode_value
+                    )
+
+                    imputed_columns.append({
+                        'column': column,
+                        'method': 'Mode',
+                        'value': str(mode_value),
+                        'count': missing_count,
+                    })
+
+
+        # --------------------------------------------------
+        # CHECK RESULT
+        # --------------------------------------------------
+
+        missing_after = int(
+            df.isna().sum().sum()
+        )
+
+        total_imputed = (
+            missing_before -
+            missing_after
+        )
+
+
+        if total_imputed == 0:
+
+            messages.warning(
+                request,
+                'Missing values could not be imputed.'
+            )
+
+            return redirect('analysis')
+
+
+        # --------------------------------------------------
+        # CREATE NEW FILE
+        # --------------------------------------------------
+
+        original_name = os.path.splitext(
+            dataset.name
+        )[0]
+
+        new_name = (
+            f"{original_name}_imputed_"
+            f"{uuid.uuid4().hex[:8]}"
+            f"{extension}"
+        )
+
+        output_dir = os.path.dirname(
+            file_path
+        )
+
+        output_path = os.path.join(
+            output_dir,
+            new_name
+        )
+
+
+        # --------------------------------------------------
+        # SAVE FILE
+        # --------------------------------------------------
+
+        if extension == '.csv':
+
+            df.to_csv(
+                output_path,
+                index=False
+            )
+
+        else:
+
+            df.to_excel(
+                output_path,
+                index=False
+            )
+
+
+        # --------------------------------------------------
+        # UPDATE DATASET RECORD
+        # --------------------------------------------------
+
+        relative_file = os.path.relpath(
+            output_path,
+            dataset.file.storage.location
+        )
+
+        dataset.file.name = relative_file.replace(
+            '\\',
+            '/'
+        )
+
+        dataset.name = new_name
+
+        dataset.rows = len(df)
+
+        dataset.columns = len(df.columns)
+
+        dataset.file_size = os.path.getsize(
+            output_path
+        )
+
+        dataset.save()
+
+
+        # --------------------------------------------------
+        # KEEP CURRENT DATASET SELECTED
+        # --------------------------------------------------
+
+        request.session['dataset_id'] = dataset.id
+
+
+        # --------------------------------------------------
+        # SUCCESS MESSAGE
+        # --------------------------------------------------
+
+        messages.success(
+            request,
+            f'Successfully imputed {total_imputed} missing values.'
+        )
+
+        return redirect('analysis')
+
+
+    except Exception as e:
+
+        messages.error(
+            request,
+            f'Unable to impute missing values: {str(e)}'
+        )
+
+        return redirect('analysis')
 @login_required(login_url='authentication')
 def visualizations(request):
 

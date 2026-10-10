@@ -163,9 +163,59 @@
 
         </div>
 
+  
+    </div>
+
+    <!-- Logged-in User Profile -->
+    <div class="px-space-md py-3 border-t border-outline-variant/20">
+        <div class="flex items-center gap-3 min-w-0">
+
+            <!-- Avatar with user initials -->
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-full bg-primary-container text-on-primary-container
+                        font-semibold uppercase">
+                {% if request.user.first_name %}
+                    {{ request.user.first_name|slice:":1" }}{% if request.user.last_name %}{{ request.user.last_name|slice:":1" }}{% endif %}
+                {% else %}
+                    {{ request.user.username|slice:":1" }}
+                {% endif %}
+            </div>
+
+            <!-- User Name and Email -->
+            <div class="flex flex-col min-w-0 flex-1">
+                <span class="text-sm font-semibold text-on-surface truncate">
+                    {% if request.user.get_full_name %}
+                        {{ request.user.get_full_name }}
+                    {% else %}
+                        {{ request.user.username }}
+                    {% endif %}
+                </span>
+
+                <span class="text-xs text-on-surface-variant truncate">
+                    {{ request.user.email|default:"Email not added" }}
+                </span>
+            </div>
+
+        </div>
+
+        <!-- Existing Logout Route -->
+        <form method="POST" action="{% url 'logout' %}" class="mt-3">
+            {% csrf_token %}
+            <button type="submit"
+                    class="w-full flex items-center gap-3 px-3 py-2 rounded-lg
+                           text-red-400 hover:bg-red-500/10 hover:text-red-300
+                           transition-all duration-150">
+                <span class="material-symbols-outlined text-lg">logout</span>
+                <span class="text-sm font-medium">Logout</span>
+            </button>
+        </form>
     </div>
 
 </aside>
+
+
+<!-- Main Content Area -->
+
 
 
 <!-- Main Content Area -->

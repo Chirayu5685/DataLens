@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from .views import (
+    delete_dataset,
     home,
     authentication,
      logout_user,
@@ -19,6 +20,7 @@ from .views import (
     loading,
     empty,
     error,
+    impute_nulls,
 )
 
 urlpatterns = [
@@ -45,6 +47,17 @@ urlpatterns = [
     'logout/',
     logout_user,
     name='logout'
+    
+),
+path(
+    'impute-nulls/',
+    impute_nulls,
+    name='impute_nulls'
+),
+path(
+    'datasets/<int:dataset_id>/delete/',
+    delete_dataset,
+    name='delete_dataset'
 ),
 ]
 

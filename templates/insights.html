@@ -377,37 +377,60 @@
         </div>
 
 
-        <!-- User -->
-        <div
-            class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container"
-        >
+        
 
-            <div
-                class="w-8 h-8 rounded-full bg-primary-container/20 text-primary flex items-center justify-center flex-shrink-0"
-            >
-                <span class="material-symbols-outlined text-lg">
-                    person
-                </span>
-            </div>
-
-            <div class="flex flex-col truncate">
-
-                <span class="font-label-md text-on-surface truncate">
-                    DataLens User
-                </span>
-
-                <span class="font-label-sm text-on-surface-variant truncate">
-                    Dataset Analyst
-                </span>
-
-            </div>
-
-        </div>
-
+<!-- Logged-in User Profile -->
+<div
+    class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container"
+    title="Logged-in user profile"
+>
+    <!-- Avatar with user initials -->
+    <div
+        class="w-10 h-10 rounded-full bg-primary-container/20 text-primary flex items-center justify-center flex-shrink-0 font-semibold uppercase"
+    >
+        {% if request.user.first_name %}
+            {{ request.user.first_name|slice:":1" }}
+            {% if request.user.last_name %}
+                {{ request.user.last_name|slice:":1" }}
+            {% endif %}
+        {% else %}
+            {{ request.user.username|slice:":1" }}
+        {% endif %}
     </div>
 
-</aside>
+```html
+<!-- Name and Email -->
+<div class="flex flex-col min-w-0 flex-1">
+    <span class="font-label-md text-on-surface truncate">
+        {% if request.user.get_full_name %}
+            {{ request.user.get_full_name }}
+        {% else %}
+            {{ request.user.username }}
+        {% endif %}
+    </span>
 
+    <span class="font-label-sm text-on-surface-variant truncate">
+        {{ request.user.email|default:"Email not added" }}
+    </span>
+</div>
+</div>
+
+<!-- Logout Button -->
+<form method="POST" action="{% url 'logout' %}" class="mt-3">
+    {% csrf_token %}
+    <button
+        type="submit"
+        class="flex w-full items-center gap-space-sm px-space-sm py-2 rounded-lg text-red-400 hover:bg-red-500/10 transition-all"
+    >
+        <span class="material-symbols-outlined text-lg">logout</span>
+        <span class="font-label-md">Logout</span>
+    </button>
+</form>
+
+</div>
+
+</aside>
+```
 
 
 <!-- ========================================================= -->

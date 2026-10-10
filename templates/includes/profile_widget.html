@@ -1,0 +1,25 @@
+
+<div class="flex items-center gap-3 min-w-0">
+    <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                rounded-full bg-indigo-600 text-white font-semibold
+                uppercase overflow-hidden">
+        {% if request.user.first_name %}
+            {{ request.user.first_name|slice:":1" }}{% if request.user.last_name %}{{ request.user.last_name|slice:":1" }}{% endif %}
+        {% else %}
+            {{ request.user.username|slice:":1" }}
+        {% endif %}
+    </div>
+
+    <div class="min-w-0">
+        <p class="truncate text-sm font-semibold text-white">
+            {% if request.user.get_full_name %}
+                {{ request.user.get_full_name }}
+            {% else %}
+                {{ request.user.username }}
+            {% endif %}
+        </p>
+        <p class="truncate text-xs text-gray-400">
+            {{ request.user.email|default:"Email not added" }}
+        </p>
+    </div>
+</div>

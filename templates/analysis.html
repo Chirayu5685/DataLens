@@ -70,7 +70,53 @@
         History
     </a>
 
-</nav></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-on-surface font-title-md text-title-md">Active Workspace</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-80 h-10 pl-9 pr-4 rounded-lg bg-surface-container border-0 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search datasets, metrics, columns... (⌘K)" type="text"/></div><a class="flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-base">add</span>+ New Analysis</a><div class="relative"><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">3</span></button></div><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Help &amp; Documentation" type="button"><span class="material-symbols-outlined text-xl">help_outline</span></button><div class="flex items-center pl-space-xs cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARyj-C3w3d08EtczhJ2kTCy_nW8zV8PLLD__hKKm_0diy_k-X8Lli9SkQGOrFNJevESdXGrRXge-LMd8tZshjQrFFKqdSN4ieO3M4BYyE4t17MWEhqI-mT_WGSXKdketSFSoyO6f2FoR7X_PnD5921xOyYvqYMpegP3k9EiMO77UULb_J-lqyt9YJAWszJPrwyBXOynmW30gWO6FlbZRKQ4lZHAB2v3g5aSDZjcEYU"/></div></div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full pb-space-2xl space-y-space-xl">
+
+</nav>
+</div>
+
+<!-- Logout Button: bottom of sidebar -->
+<div class="border-t border-outline-variant/30 p-space-md">
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button
+            type="submit"
+            class="flex w-full items-center gap-space-sm px-space-md py-3 rounded-lg
+                   text-on-surface-variant font-label-lg text-label-lg
+                   hover:bg-surface-container-high hover:text-error
+                   transition-all duration-150">
+            <span class="material-symbols-outlined text-lg">logout</span>
+            <span>Logout</span>
+        </button>
+    </form>
+</div>
+
+</aside>
+<div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md"><span class="hover:text-on-surface transition-colors cursor-pointer">Universal Analyzer</span><span class="material-symbols-outlined text-sm text-outline">chevron_right</span><span class="text-on-surface font-title-md text-title-md">Active Workspace</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-base">search</span><input class="w-80 h-10 pl-9 pr-4 rounded-lg bg-surface-container border-0 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search datasets, metrics, columns... (⌘K)" type="text"/></div><a class="flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_16px_rgba(37,99,235,0.35)] hover:bg-primary hover:text-on-primary transition-all duration-150" data-path="upload-dataset" href="#"><span class="material-symbols-outlined text-base">add</span>+ New Analysis</a><div class="relative"><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">3</span></button></div><button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Help &amp; Documentation" type="button"><span class="material-symbols-outlined text-xl">help_outline</span></button>
+<div class="flex items-center gap-3 pl-space-xs min-w-0">
+    <div class="flex h-9 w-9 shrink-0 items-center justify-center
+                rounded-full bg-primary-container text-on-primary-container
+                font-semibold uppercase ring-2 ring-surface-container-high">
+        {% if request.user.first_name %}
+            {{ request.user.first_name|slice:":1" }}{% if request.user.last_name %}{{ request.user.last_name|slice:":1" }}{% endif %}
+        {% else %}
+            {{ request.user.username|slice:":1" }}
+        {% endif %}
+    </div>
+
+    <div class="hidden lg:flex flex-col min-w-0 max-w-40">
+        <span class="truncate text-sm font-semibold text-on-surface">
+            {% if request.user.get_full_name %}
+                {{ request.user.get_full_name }}
+            {% else %}
+                {{ request.user.username }}
+            {% endif %}
+        </span>
+        <span class="truncate text-xs text-on-surface-variant">
+            {{ request.user.email|default:"Email not added" }}
+        </span>
+    </div>
+</div>
+</div></header><main class="w-full pt-16 px-space-xl bg-background min-h-screen"><div class="flex flex-col w-full pb-space-2xl space-y-space-xl">
 <!-- Top Workspace Action Context Strip -->
 <div class="relative overflow-hidden rounded-xl bg-surface-container-low/90 backdrop-blur-xl p-space-lg shadow-xl shadow-surface-container-lowest/50">
 <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
@@ -290,88 +336,270 @@
 </div>
 <!-- Matrix Bars -->
 <div class="space-y-space-sm pt-2">
-<!-- TotalCharges -->
-<div class="space-y-1">
-<div class="flex items-center justify-between font-label-md text-label-md">
-<span class="font-mono text-on-surface">TotalCharges</span>
-<span class="text-secondary font-mono">11 missing (0.077%)</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full bg-secondary rounded-full" style="width: 7.7%"></div>
-</div>
-</div>
-<!-- Age -->
-<div class="space-y-1">
-<div class="flex items-center justify-between font-label-md text-label-md">
-<span class="font-mono text-on-surface">Age</span>
-<span class="text-secondary font-mono">3 missing (0.021%)</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full bg-secondary-container rounded-full" style="width: 2.1%"></div>
-</div>
-</div>
-<!-- All other 16 columns -->
-<div class="space-y-1 pt-1">
-<div class="flex items-center justify-between font-label-md text-label-md">
-<span class="font-mono text-on-surface-variant">16 Remaining Columns</span>
-<span class="text-primary font-mono">0 missing (100.0% Complete)</span>
-</div>
-<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
-<div class="h-full bg-primary-container rounded-full" style="width: 100%"></div>
-</div>
-</div>
+
+    {% for column in analysis_columns %}
+
+    <div class="space-y-1">
+
+        <div class="flex items-center justify-between font-label-md text-label-md">
+
+            <span class="font-mono text-on-surface">
+                {{ column.name }}
+            </span>
+
+            <span class="{% if column.missing > 0 %}text-secondary{% else %}text-primary{% endif %} font-mono">
+                {{ column.missing }} missing
+                ({{ column.missing_percent|default:"0" }}%)
+            </span>
+
+        </div>
+
+        <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+
+            {% if total_rows > 0 and column.missing > 0 %}
+
+                <div
+                    class="h-full bg-secondary rounded-full"
+                    style="width: {% widthratio column.missing total_rows 100 %}%;">
+                </div>
+
+            {% else %}
+
+                <div
+                    class="h-full bg-primary-container rounded-full"
+                    style="width: 0%;">
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    {% empty %}
+
+    <div class="py-6 text-center text-on-surface-variant">
+        No column information available.
+    </div>
+
+    {% endfor %}
+
 </div>
 <div class="p-3 rounded-lg bg-surface-container/60 flex items-start gap-2.5 text-body-sm font-body-sm text-on-surface-variant">
 <span class="material-symbols-outlined text-base text-primary shrink-0 mt-0.5">auto_fix_high</span>
-<span>Engine recommendation: Impute <span class="font-mono text-on-surface">TotalCharges</span> with tenure-weighted median and <span class="font-mono text-on-surface">Age</span> with mode distribution.</span>
-</div>
+<span>
+    {% if total_missing > 0 %}
+        Review the columns with missing values before performing advanced analysis or machine learning.
+    {% else %}
+        No missing values detected. The dataset is ready for further analysis.
+    {% endif %}
+</span></div>
 </div>
 <!-- Data Types Breakdown Donut / Meter -->
 <div class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-lg shadow-md space-y-space-md">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-lg">donut_large</span>
-<h3 class="font-title-md text-title-md text-on-surface">Data Types Breakdown</h3>
-</div>
-<span class="font-label-sm text-label-sm text-outline">18 Features</span>
-</div>
-<!-- Visual Multi-segment Bar -->
-<div class="w-full h-4 rounded-full bg-surface-container-highest flex overflow-hidden">
-<div class="h-full bg-primary-container" style="width: 55.6%" title="Numerical: 55.6%"></div>
-<div class="h-full bg-tertiary-container" style="width: 33.3%" title="Categorical: 33.3%"></div>
-<div class="h-full bg-secondary" style="width: 5.6%" title="Date/Time: 5.6%"></div>
-<div class="h-full bg-surface-bright" style="width: 5.5%" title="Boolean: 5.5%"></div>
-</div>
-<div class="grid grid-cols-2 gap-space-sm pt-1">
-<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
-<span class="w-3 h-3 rounded-sm bg-primary-container shrink-0"></span>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface">Numerical (10)</span>
-<span class="font-label-sm text-label-sm text-outline font-mono">55.6% • Float/Int</span>
-</div>
-</div>
-<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
-<span class="w-3 h-3 rounded-sm bg-tertiary-container shrink-0"></span>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface">Categorical (6)</span>
-<span class="font-label-sm text-label-sm text-outline font-mono">33.3% • Enum/Text</span>
-</div>
-</div>
-<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
-<span class="w-3 h-3 rounded-sm bg-secondary shrink-0"></span>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface">Date/Time (1)</span>
-<span class="font-label-sm text-label-sm text-outline font-mono">5.6% • ISO-8601</span>
-</div>
-</div>
-<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
-<span class="w-3 h-3 rounded-sm bg-surface-bright shrink-0"></span>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface">Boolean (1)</span>
-<span class="font-label-sm text-label-sm text-outline font-mono">5.5% • Binary 0/1</span>
-</div>
-</div>
-</div>
+
+    <div class="flex items-center justify-between">
+
+        <div class="flex items-center gap-2">
+
+            <span class="material-symbols-outlined text-primary text-lg">
+                donut_large
+            </span>
+
+            <h3 class="font-title-md text-title-md text-on-surface">
+                Data Types Breakdown
+            </h3>
+
+        </div>
+
+        <span class="font-label-sm text-label-sm text-outline">
+            {{ total_columns }} Features
+        </span>
+
+    </div>
+
+
+    <!-- Visual Multi-segment Bar -->
+
+    <div class="w-full h-4 rounded-full bg-surface-container-highest flex overflow-hidden">
+
+        <!-- Numerical -->
+
+        {% if total_columns > 0 and numeric_count > 0 %}
+
+        <div
+            class="h-full bg-primary-container"
+            style="width: {% widthratio numeric_count total_columns 100 %}%"
+            title="Numerical: {{ numeric_count }}">
+        </div>
+
+        {% endif %}
+
+
+        <!-- Categorical -->
+
+        {% if total_columns > 0 and categorical_count > 0 %}
+
+        <div
+            class="h-full bg-tertiary-container"
+            style="width: {% widthratio categorical_count total_columns 100 %}%"
+            title="Categorical: {{ categorical_count }}">
+        </div>
+
+        {% endif %}
+
+
+        <!-- Date / Time -->
+
+        {% if total_columns > 0 and datetime_count > 0 %}
+
+        <div
+            class="h-full bg-secondary"
+            style="width: {% widthratio datetime_count total_columns 100 %}%"
+            title="Date/Time: {{ datetime_count }}">
+        </div>
+
+        {% endif %}
+
+
+        <!-- Boolean -->
+
+        {% if total_columns > 0 and boolean_count > 0 %}
+
+        <div
+            class="h-full bg-surface-bright"
+            style="width: {% widthratio boolean_count total_columns 100 %}%"
+            title="Boolean: {{ boolean_count }}">
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- Type Details -->
+
+    <div class="grid grid-cols-2 gap-space-sm pt-1">
+
+
+        <!-- Numerical -->
+
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
+
+            <span class="w-3 h-3 rounded-sm bg-primary-container shrink-0"></span>
+
+            <div class="flex flex-col">
+
+                <span class="font-label-sm text-label-sm text-on-surface">
+                    Numerical ({{ numeric_count }})
+                </span>
+
+                <span class="font-label-sm text-label-sm text-outline font-mono">
+
+                    {% if total_columns > 0 %}
+                        {% widthratio numeric_count total_columns 100 %}%
+                    {% else %}
+                        0%
+                    {% endif %}
+
+                    • Float/Int
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Categorical -->
+
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
+
+            <span class="w-3 h-3 rounded-sm bg-tertiary-container shrink-0"></span>
+
+            <div class="flex flex-col">
+
+                <span class="font-label-sm text-label-sm text-on-surface">
+                    Categorical ({{ categorical_count }})
+                </span>
+
+                <span class="font-label-sm text-label-sm text-outline font-mono">
+
+                    {% if total_columns > 0 %}
+                        {% widthratio categorical_count total_columns 100 %}%
+                    {% else %}
+                        0%
+                    {% endif %}
+
+                    • Text
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Date / Time -->
+
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
+
+            <span class="w-3 h-3 rounded-sm bg-secondary shrink-0"></span>
+
+            <div class="flex flex-col">
+
+                <span class="font-label-sm text-label-sm text-on-surface">
+                    Date/Time ({{ datetime_count }})
+                </span>
+
+                <span class="font-label-sm text-label-sm text-outline font-mono">
+
+                    {% if total_columns > 0 %}
+                        {% widthratio datetime_count total_columns 100 %}%
+                    {% else %}
+                        0%
+                    {% endif %}
+
+                    • Timestamp
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Boolean -->
+
+        <div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container/40">
+
+            <span class="w-3 h-3 rounded-sm bg-surface-bright shrink-0"></span>
+
+            <div class="flex flex-col">
+
+                <span class="font-label-sm text-label-sm text-on-surface">
+                    Boolean ({{ boolean_count }})
+                </span>
+
+                <span class="font-label-sm text-label-sm text-outline font-mono">
+
+                    {% if total_columns > 0 %}
+                        {% widthratio boolean_count total_columns 100 %}%
+                    {% else %}
+                        0%
+                    {% endif %}
+
+                    • True/False
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
 </div>
 </div>
 <!-- Right Column: Statistical Distribution & Correlations Overview (7 Cols on Wide) -->
@@ -384,137 +612,247 @@
 <span class="material-symbols-outlined text-secondary text-lg">grid_on</span>
 <h3 class="font-title-md text-title-md text-on-surface">Key Variable Correlation Matrix</h3>
 </div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Pearson coefficient heatmap calculated over continuous dimensions</p>
-</div>
-<span class="px-2.5 py-1 rounded bg-surface-container text-primary font-mono text-label-sm">p-value &lt; 0.001</span>
-</div>
-<!-- 4x4 Correlation Matrix Grid -->
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+    Pearson correlation coefficients calculated across numerical features
+</p></div>
+<span class="px-2.5 py-1 rounded bg-surface-container text-primary font-mono text-label-sm">
+    Pearson Correlation
+</span></div>
+<!-- Dynamic Correlation Matrix -->
 <div class="overflow-x-auto">
-<table class="w-full text-center border-collapse">
-<thead>
-<tr class="font-label-sm text-label-sm text-outline">
-<th class="text-left py-2 px-3 font-normal">Metric Dimension</th>
-<th class="py-2 px-3">MonthlyCharges</th>
-<th class="py-2 px-3">TenureMonths</th>
-<th class="py-2 px-3">TotalCharges</th>
-<th class="py-2 px-3">ChurnProb</th>
-</tr>
-</thead>
-<tbody class="font-mono text-label-md">
-<tr class="hover:bg-surface-container/30 transition-colors">
-<td class="text-left py-2.5 px-3 font-medium text-on-surface">MonthlyCharges</td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container text-on-primary-container font-semibold">1.00</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-surface-container-high text-on-surface">0.25</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container/70 text-on-primary-container font-semibold">0.65</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-secondary-container/40 text-secondary">0.19</div></td>
-</tr>
-<tr class="hover:bg-surface-container/30 transition-colors">
-<td class="text-left py-2.5 px-3 font-medium text-on-surface">TenureMonths</td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-surface-container-high text-on-surface">0.25</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container text-on-primary-container font-semibold">1.00</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container/85 text-on-primary-container font-semibold">0.83</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-error-container/30 text-error">-0.35</div></td>
-</tr>
-<tr class="hover:bg-surface-container/30 transition-colors">
-<td class="text-left py-2.5 px-3 font-medium text-on-surface">TotalCharges</td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container/70 text-on-primary-container font-semibold">0.65</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container/85 text-on-primary-container font-semibold">0.83</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container text-on-primary-container font-semibold">1.00</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-error-container/20 text-error">-0.20</div></td>
-</tr>
-<tr class="hover:bg-surface-container/30 transition-colors">
-<td class="text-left py-2.5 px-3 font-medium text-on-surface">ChurnProb</td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-secondary-container/40 text-secondary">0.19</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-error-container/30 text-error">-0.35</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-error-container/20 text-error">-0.20</div></td>
-<td class="py-2 px-3"><div class="rounded p-1.5 bg-primary-container text-on-primary-container font-semibold">1.00</div></td>
-</tr>
-</tbody>
-</table>
+
+    {% if correlation_columns|length >= 2 %}
+
+    <table class="w-full text-center border-collapse">
+
+        <thead>
+
+            <tr class="font-label-sm text-label-sm text-outline">
+
+                <th class="text-left py-2 px-3 font-normal">
+                    Metric Dimension
+                </th>
+
+                {% for column in correlation_columns %}
+
+                <th class="py-2 px-3 whitespace-nowrap">
+                    {{ column }}
+                </th>
+
+                {% endfor %}
+
+            </tr>
+
+        </thead>
+
+        <tbody class="font-mono text-label-md">
+
+            {% for row in correlation_matrix %}
+
+            <tr class="hover:bg-surface-container/30 transition-colors">
+
+                <td class="text-left py-2.5 px-3 font-medium text-on-surface whitespace-nowrap">
+                    {{ row.name }}
+                </td>
+
+                {% for value in row.values %}
+
+                <td class="py-2 px-3">
+
+                    {% if value is None %}
+
+                        <div class="rounded p-1.5 bg-surface-container-high text-outline">
+                            —
+                        </div>
+
+                    {% elif value == 1 or value == -1 %}
+
+                        <div class="rounded p-1.5 bg-primary-container text-on-primary-container font-semibold">
+                            {{ value }}
+                        </div>
+
+                    {% elif value > 0.7 %}
+
+                        <div class="rounded p-1.5 bg-primary-container/80 text-on-primary-container font-semibold">
+                            {{ value }}
+                        </div>
+
+                    {% elif value > 0.3 %}
+
+                        <div class="rounded p-1.5 bg-primary-container/40 text-on-primary-container">
+                            {{ value }}
+                        </div>
+
+                    {% elif value < -0.7 %}
+
+                        <div class="rounded p-1.5 bg-error-container/60 text-error font-semibold">
+                            {{ value }}
+                        </div>
+
+                    {% elif value < -0.3 %}
+
+                        <div class="rounded p-1.5 bg-error-container/30 text-error">
+                            {{ value }}
+                        </div>
+
+                    {% else %}
+
+                        <div class="rounded p-1.5 bg-surface-container-high text-on-surface">
+                            {{ value }}
+                        </div>
+
+                    {% endif %}
+
+                </td>
+
+                {% endfor %}
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+    <div class="py-8 text-center text-on-surface-variant">
+
+        <span class="material-symbols-outlined text-3xl mb-2">
+            grid_off
+        </span>
+
+        <p>
+            At least two numerical columns are required to calculate correlations.
+        </p>
+
+    </div>
+
+    {% endif %}
+
 </div>
-<div class="flex items-center justify-between text-body-sm font-body-sm text-outline pt-1">
-<span class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded bg-primary-container"></span> Strong positive (+0.83 TotalCharges / Tenure)
-          </span>
-<span class="flex items-center gap-1.5">
-<span class="w-2 h-2 rounded bg-error-container/60"></span> Inverse factor (-0.35 Churn / Tenure)
-          </span>
-</div>
-</div>
-<!-- Mini Distribution Curves (MonthlyCharges & Tenure) -->
+<!-- Dynamic Distribution Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-<!-- MonthlyCharges Distribution Card -->
-<div class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-md shadow-md space-y-space-xs">
-<div class="flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-outline font-mono">DIST-01</span>
-<h4 class="font-title-md text-title-md text-on-surface">MonthlyCharges</h4>
-</div>
-<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-label-sm">Bimodal</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Density peaks at $20 (Basic tier) and $85 (Premium Bundle).</p>
-<!-- Inline SVG Distribution Curve -->
-<div class="pt-2">
-<svg class="w-full h-28 overflow-visible" preserveaspectratio="none" viewbox="0 0 300 100">
-<defs>
-<lineargradient id="grad-mc" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#2563eb" stop-opacity="0.45"></stop>
-<stop offset="100%" stop-color="#2563eb" stop-opacity="0.0"></stop>
-</lineargradient>
-</defs>
-<line stroke="#434655" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="300" y1="90" y2="90"></line>
-<line stroke="#434655" stroke-dasharray="2 2" stroke-width="1" x1="150" x2="150" y1="10" y2="90"></line>
-<!-- Filled Area -->
-<path d="M 0,90 Q 30,85 50,40 T 90,70 T 150,60 T 210,25 T 260,65 T 300,90 L 300,90 L 0,90 Z" fill="url(#grad-mc)"></path>
-<!-- Curve Stroke -->
-<path d="M 0,90 Q 30,85 50,40 T 90,70 T 150,60 T 210,25 T 260,65 T 300,90" fill="none" stroke="#2563eb" stroke-width="2.5"></path>
-<!-- Median indicator circle -->
-<circle cx="178" cy="46" fill="#4cd7f6" r="3.5"></circle>
-</svg>
-<div class="flex justify-between font-mono text-label-sm text-outline pt-1">
-<span>$18.25 (Min)</span>
-<span class="text-secondary">Median $70.35</span>
-<span>$118.75 (Max)</span>
-</div>
-</div>
-</div>
-<!-- Tenure Distribution Card -->
-<div class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-md shadow-md space-y-space-xs">
-<div class="flex items-center justify-between">
-<div>
-<span class="font-label-sm text-label-sm text-outline font-mono">DIST-02</span>
-<h4 class="font-title-md text-title-md text-on-surface">TenureMonths</h4>
-</div>
-<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono text-label-sm">U-Shaped Skew</span>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">High clustering at Month 1 (onboarding) and Month 72 (max longevity).</p>
-<!-- Inline SVG Distribution Curve -->
-<div class="pt-2">
-<svg class="w-full h-28 overflow-visible" preserveaspectratio="none" viewbox="0 0 300 100">
-<defs>
-<lineargradient id="grad-tenure" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.4"></stop>
-<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
-</lineargradient>
-</defs>
-<line stroke="#434655" stroke-dasharray="2 4" stroke-width="1" x1="0" x2="300" y1="90" y2="90"></line>
-<line stroke="#434655" stroke-dasharray="2 2" stroke-width="1" x1="150" x2="150" y1="10" y2="90"></line>
-<!-- Filled Area -->
-<path d="M 0,90 Q 20,20 40,30 T 90,75 T 150,78 T 210,70 T 260,35 T 300,20 L 300,90 L 0,90 Z" fill="url(#grad-tenure)"></path>
-<!-- Curve Stroke -->
-<path d="M 0,90 Q 20,20 40,30 T 90,75 T 150,78 T 210,70 T 260,35 T 300,20" fill="none" stroke="#4cd7f6" stroke-width="2.5"></path>
-<!-- Median indicator circle -->
-<circle cx="120" cy="77" fill="#d0bcff" r="3.5"></circle>
-</svg>
-<div class="flex justify-between font-mono text-label-sm text-outline pt-1">
-<span>1.0 Mo</span>
-<span class="text-tertiary">Median 29.0 Mo</span>
-<span>72.0 Mo (Max)</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+    {% for item in distribution_data %}
+
+    <div class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-md shadow-md space-y-space-xs">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between">
+
+            <div>
+
+                <span class="font-label-sm text-label-sm text-outline font-mono">
+                    DIST-{{ forloop.counter|stringformat:"02d" }}
+                </span>
+
+                <h4 class="font-title-md text-title-md text-on-surface">
+                    {{ item.name }}
+                </h4>
+
+            </div>
+
+            <span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-mono text-label-sm">
+                {{ item.distribution_type }}
+            </span>
+
+        </div>
+
+
+        <!-- Description -->
+
+        <p class="font-body-sm text-body-sm text-on-surface-variant">
+
+            Distribution based on
+            <span class="font-mono text-on-surface">
+                {{ item.count }}
+            </span>
+            valid numeric observations.
+
+        </p>
+
+
+        <!-- Dynamic Histogram -->
+
+        <div class="pt-3">
+
+            <div class="h-28 flex items-end gap-1">
+
+                {% for height in item.histogram %}
+
+                <div
+                    class="flex-1 bg-primary-container rounded-t-sm hover:bg-primary transition-all duration-200"
+                    style="height: {{ height }}%;"
+                    title="Distribution bin {{ forloop.counter }}: {{ height }}%">
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- Baseline -->
+
+            <div class="w-full h-px bg-outline-variant mt-1"></div>
+
+
+            <!-- Statistics -->
+
+            <div class="flex justify-between font-mono text-label-sm text-outline pt-2">
+
+                <span>
+                    Min {{ item.min }}
+                </span>
+
+                <span class="text-secondary">
+                    Median {{ item.median }}
+                </span>
+
+                <span>
+                    Max {{ item.max }}
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mean -->
+
+        <div class="flex items-center justify-between pt-2 border-t border-surface-container-highest/30">
+
+            <span class="font-label-sm text-outline">
+                Mean
+            </span>
+
+            <span class="font-mono text-primary font-semibold">
+                {{ item.mean }}
+            </span>
+
+        </div>
+
+    </div>
+
+    {% empty %}
+
+    <!-- No Numeric Columns -->
+
+    <div class="md:col-span-2 rounded-xl bg-surface-container-low/90 p-space-lg text-center">
+
+        <span class="material-symbols-outlined text-3xl text-outline">
+            bar_chart
+        </span>
+
+        <p class="mt-2 font-body-md text-on-surface-variant">
+            No numeric columns are available for distribution analysis.
+        </p>
+
+    </div>
+
+    {% endfor %}
+
 </div>
 <!-- 3. Comprehensive Statistical Summary Table (Full Width) -->
 <div class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-lg shadow-xl space-y-space-md">
@@ -528,11 +866,37 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">Moment-based parametric profiles: μ (Centrality), σ (Dispersion), Fisher-Pearson Skewness coefficient.</p>
 </div>
 <!-- Quick Filter & Action Ribbon -->
-<div class="flex items-center gap-space-sm">
 <div class="flex items-center rounded-lg bg-surface-container p-1 font-label-sm text-label-sm">
-<button class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-medium">All Types ({{ total_columns }})</button>
-<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface transition-colors">Numerical ({{ numeric_count }})</button>
-<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface transition-colors">Categorical ({{ categorical_count }})</button>
+
+    <button
+        type="button"
+        onclick="filterAnalysisTable('all', this)"
+        class="analysis-filter px-3 py-1 rounded bg-primary-container text-on-primary-container font-medium">
+
+        All Types ({{ total_columns }})
+
+    </button>
+
+
+    <button
+        type="button"
+        onclick="filterAnalysisTable('numeric', this)"
+        class="analysis-filter px-3 py-1 text-on-surface-variant hover:text-on-surface transition-colors">
+
+        Numerical ({{ numeric_count }})
+
+    </button>
+
+
+    <button
+        type="button"
+        onclick="filterAnalysisTable('categorical', this)"
+        class="analysis-filter px-3 py-1 text-on-surface-variant hover:text-on-surface transition-colors">
+
+        Categorical ({{ categorical_count }})
+
+    </button>
+
 </div>
 <button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download TSV">
 <span class="material-symbols-outlined text-base">download</span>
@@ -541,185 +905,409 @@
 </div>
 <!-- Responsive Table Container -->
 <div class="overflow-x-auto rounded-lg bg-surface-container-lowest/60">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-surface-container/80 text-outline font-label-sm text-label-sm uppercase tracking-wider">
-<th class="py-3.5 px-4 font-semibold">Feature / Column</th>
-<th class="py-3.5 px-3 font-semibold">Data Type</th>
-<th class="py-3.5 px-3 font-semibold text-right">Count (Non-Null)</th>
-<th class="py-3.5 px-3 font-semibold text-right">Mean (μ)</th>
-<th class="py-3.5 px-3 font-semibold text-right">Median (x̄)</th>
-<th class="py-3.5 px-3 font-semibold text-right">Min</th>
-<th class="py-3.5 px-3 font-semibold text-right">Max</th>
-<th class="py-3.5 px-3 font-semibold text-right">Std Dev (σ)</th>
-<th class="py-3.5 px-3 font-semibold text-right">Skewness</th>
-<th class="py-3.5 px-4 font-semibold text-center">Quick Actions</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-surface-container-highest/20 font-mono text-label-md text-on-surface">
 
-{% for column in analysis_columns %}
+    <table class="w-full text-left border-collapse">
 
-<tr class="hover:bg-surface-container/50 transition-colors group">
+        <thead>
 
-    <!-- Feature -->
-    <td class="py-3.5 px-4">
-        <div class="flex items-center gap-2">
+            <tr class="bg-surface-container/80 text-outline font-label-sm text-label-sm uppercase tracking-wider">
 
-            <span class="w-2 h-2 rounded-full
-                {% if column.is_numeric %}
-                    bg-primary
-                {% else %}
-                    bg-tertiary
-                {% endif %}
-            "></span>
+                <th class="py-3.5 px-4 font-semibold">
+                    Feature / Column
+                </th>
 
-            <span class="font-semibold text-on-surface">
-                {{ column.name }}
+                <th class="py-3.5 px-3 font-semibold">
+                    Data Type
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Count (Non-Null)
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Mean (μ)
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Median
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Min
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Max
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Std Dev (σ)
+                </th>
+
+                <th class="py-3.5 px-3 font-semibold text-right">
+                    Skewness
+                </th>
+
+                <th class="py-3.5 px-4 font-semibold text-center">
+                    Quick Actions
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody class="divide-y divide-surface-container-highest/20 font-mono text-label-md text-on-surface">
+
+
+            {% for column in analysis_columns %}
+
+            <tr
+    data-column-type="{% if column.is_numeric %}numeric{% else %}categorical{% endif %}"
+    class="analysis-row hover:bg-surface-container/50 transition-colors group">
+
+
+                <!-- Feature / Column -->
+
+                <td class="py-3.5 px-4">
+
+                    <div class="flex items-center gap-2">
+
+                        <span
+                            class="w-2 h-2 rounded-full shrink-0
+                            {% if column.is_numeric %}
+                                bg-primary
+                            {% else %}
+                                bg-tertiary
+                            {% endif %}">
+                        </span>
+
+
+                        <span class="font-semibold text-on-surface">
+                            {{ column.name }}
+                        </span>
+
+
+                        {% if column.missing > 0 %}
+
+                        <span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-container/20 text-secondary">
+
+                            {{ column.missing }} Nulls
+
+                        </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </td>
+
+
+                <!-- Data Type -->
+
+                <td class="py-3.5 px-3">
+
+                    <span
+                        class="px-2 py-0.5 rounded-full
+                        {% if column.is_numeric %}
+                            bg-primary-container/20 text-primary
+                        {% else %}
+                            bg-tertiary-container/30 text-tertiary
+                        {% endif %}
+                        font-mono text-label-sm">
+
+                        {{ column.dtype }}
+
+                    </span>
+
+                </td>
+
+
+                <!-- Non Null Count -->
+
+                <td class="py-3.5 px-3 text-right">
+
+                    <span class="text-on-surface font-medium">
+                        {{ column.non_null }}
+                    </span>
+
+                    <span class="text-outline text-label-sm">
+
+                        / {{ total_rows }}
+
+                    </span>
+
+                </td>
+
+
+                <!-- Mean -->
+
+                <td class="py-3.5 px-3 text-right font-semibold text-primary">
+
+                    {% if column.is_numeric and column.mean is not None %}
+
+                        {{ column.mean }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </td>
+
+
+                <!-- Median -->
+
+                <td class="py-3.5 px-3 text-right">
+
+                    {% if column.is_numeric and column.median is not None %}
+
+                        {{ column.median }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </td>
+
+
+                <!-- Min -->
+
+                <td class="py-3.5 px-3 text-right text-on-surface-variant">
+
+                    {% if column.is_numeric and column.min is not None %}
+
+                        {{ column.min }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </td>
+
+
+                <!-- Max -->
+
+                <td class="py-3.5 px-3 text-right text-on-surface">
+
+                    {% if column.is_numeric and column.max is not None %}
+
+                        {{ column.max }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </td>
+
+
+                <!-- Standard Deviation -->
+
+                <td class="py-3.5 px-3 text-right text-on-surface-variant">
+
+                    {% if column.is_numeric and column.std is not None %}
+
+                        {{ column.std }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </td>
+
+
+                <!-- Skewness -->
+
+                <td class="py-3.5 px-3 text-right">
+
+                    {% if column.is_numeric and column.skewness is not None %}
+
+                        {% if column.skewness > 1 or column.skewness < -1 %}
+
+                            <span class="text-secondary font-semibold">
+                                {{ column.skewness }}
+                            </span>
+
+                        {% elif column.skewness > 0.5 or column.skewness < -0.5 %}
+
+                            <span class="text-primary">
+                                {{ column.skewness }}
+                            </span>
+
+                        {% else %}
+
+                            <span class="text-on-surface-variant">
+                                {{ column.skewness }}
+                            </span>
+
+                        {% endif %}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </td>
+
+
+                <!-- Quick Actions -->
+
+                <td class="py-3.5 px-4 text-center">
+
+                    <div class="flex items-center justify-center gap-1.5">
+
+                        <a
+                            href="{% url 'visualizations' %}"
+                            class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-primary-container hover:text-on-primary-container text-label-sm font-sans transition-all">
+
+                            Visualize
+
+                        </a>
+
+
+                        {% if column.missing > 0 %}
+
+
+{% if column.missing > 0 %}
+<form
+    method="POST"
+    action="{% url 'impute_nulls' %}"
+    class="inline">
+
+    {% csrf_token %}
+
+    <input
+        type="hidden"
+        name="dataset_id"
+        value="{{ dataset.id }}">
+
+    <input
+        type="hidden"
+        name="column_name"
+        value="{{ column.name }}">
+
+    <button
+        type="submit"
+        onclick="return confirm('Fill missing values in this column using the median for numeric data or the mode for categorical data?');"
+        class="px-2.5 py-1 rounded bg-secondary-container/20 text-secondary hover:bg-secondary hover:text-on-secondary text-label-sm font-sans font-semibold transition-all">
+        Impute Nulls
+    </button>
+</form>
+{% endif %}
+
+
+{% endif %}
+
+                    </div>
+
+                </td>
+
+
+            </tr>
+
+
+            {% empty %}
+
+            <tr>
+
+                <td
+                    colspan="10"
+                    class="py-10 text-center text-on-surface-variant">
+
+                    No columns available for analysis.
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+<!-- Dynamic Table Status Footer -->
+
+<div class="flex flex-col sm:flex-row items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-2 gap-space-sm">
+
+    <div class="flex items-center gap-2">
+
+        <span class="material-symbols-outlined text-secondary text-base">
+            check
+        </span>
+
+        <span>
+
+            Showing
+            <span class="text-on-surface font-semibold">
+                {{ analysis_columns|length }}
             </span>
+            of
+            <span class="text-on-surface font-semibold">
+                {{ total_columns }}
+            </span>
+            features.
 
-            {% if column.missing > 0 %}
-                <span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-container/20 text-secondary">
-                    {{ column.missing }} Nulls
-                </span>
-            {% endif %}
-
-        </div>
-    </td>
-
-    <!-- Data Type -->
-    <td class="py-3.5 px-3">
-
-        <span class="px-2 py-0.5 rounded-full
-            {% if column.is_numeric %}
-                bg-primary-container/20 text-primary
-            {% else %}
-                bg-tertiary-container/30 text-tertiary
-            {% endif %}
-            font-mono text-label-sm">
-
-            {{ column.dtype }}
+            <span class="text-outline">
+                Sampling rate: 100%
+            </span>
 
         </span>
 
-    </td>
+    </div>
 
-    <!-- Non Null Count -->
-    <td class="py-3.5 px-3 text-right text-on-surface font-medium">
 
-        {{ total_rows|add:"-"|add:column.missing }}
+    <div class="flex items-center gap-2 font-mono text-label-sm">
 
-        {% if total_rows > 0 %}
-            <span class="text-secondary font-label-sm">
-                ({{ total_rows }} rows)
-            </span>
-        {% endif %}
+        <span>
+            Total rows:
+        </span>
 
-    </td>
+        <span class="text-on-surface">
+            {{ total_rows }}
+        </span>
 
-    <!-- Mean -->
-    <td class="py-3.5 px-3 text-right font-semibold text-primary">
-        {% if column.is_numeric %}
-            {{ column.mean|default:"N/A" }}
-        {% else %}
-            N/A
-        {% endif %}
-    </td>
+        <span class="text-outline">
+            |
+        </span>
 
-    <!-- Median -->
-    <td class="py-3.5 px-3 text-right">
-        {% if column.is_numeric %}
-            {{ column.median|default:"N/A" }}
-        {% else %}
-            N/A
-        {% endif %}
-    </td>
+        <span>
+            Total columns:
+        </span>
 
-    <!-- Min -->
-    <td class="py-3.5 px-3 text-right text-on-surface-variant">
-        {% if column.is_numeric %}
-            {{ column.min|default:"N/A" }}
-        {% else %}
-            N/A
-        {% endif %}
-    </td>
+        <span class="text-on-surface">
+            {{ total_columns }}
+        </span>
 
-    <!-- Max -->
-    <td class="py-3.5 px-3 text-right text-on-surface">
-        {% if column.is_numeric %}
-            {{ column.max|default:"N/A" }}
-        {% else %}
-            N/A
-        {% endif %}
-    </td>
+    </div>
 
-    <!-- Standard Deviation -->
-    <td class="py-3.5 px-3 text-right text-on-surface-variant">
-        {% if column.is_numeric %}
-            {{ column.std|default:"N/A" }}
-        {% else %}
-            N/A
-        {% endif %}
-    </td>
-
-    <!-- Skewness -->
-    <td class="py-3.5 px-3 text-right text-on-surface-variant">
-        {% if column.is_numeric %}
-            —
-        {% else %}
-            —
-        {% endif %}
-    </td>
-
-    <!-- Actions -->
-    <td class="py-3.5 px-4 text-center">
-
-        <div class="flex items-center justify-center gap-1.5">
-
-            <a href="{% url 'visualizations' %}"
-               class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-primary-container hover:text-on-primary-container text-label-sm font-sans transition-all">
-                Visualize
-            </a>
-
-            {% if column.missing > 0 %}
-                <button class="px-2.5 py-1 rounded bg-secondary-container/20 text-secondary hover:bg-secondary hover:text-on-secondary text-label-sm font-sans font-semibold transition-all">
-                    Impute Nulls
-                </button>
-            {% endif %}
-
-        </div>
-
-    </td>
-
-</tr>
-
-{% empty %}
-
-<tr>
-    <td colspan="10" class="py-10 text-center text-on-surface-variant">
-        No columns available for analysis.
-    </td>
-</tr>
-
-{% endfor %}
-
-</tbody>
-</table>
 </div>
 <!-- Table Pagination / Status Footer -->
 <div class="flex flex-col sm:flex-row items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-2 gap-space-sm">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-secondary text-base">check</span>
-<span>Showing 5 of 10 numerical features profile vectors. Sampling rate: 100% (No subsampling downscale).</span>
-</div>
+<span>
+    Showing {{ analysis_columns|length }} of {{ total_columns }}
+    features. Sampling rate: 100%.
+</span></div>
 <div class="flex items-center gap-2 font-mono text-label-sm">
-<span>Rows per page:</span>
-<select class="bg-surface-container text-on-surface rounded px-2 py-1 border-0 focus:ring-1 focus:ring-primary">
-<option>5</option>
-<option>10</option>
-<option>25</option>
-</select>
-<span class="text-outline">Page 1 of 2</span>
+<span class="text-outline">
+    {{ analysis_columns|length }} features
+</span>
 <button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface" disabled=""><span class="material-symbols-outlined text-sm">chevron_left</span></button>
 <button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
 </div>
@@ -737,5 +1325,60 @@
         setTimeout(() => icon.classList.remove('rotate-180'), 600);
       }
     });
+  }
+    // --------------------------------------------------
+  // Statistical Summary Table Filters
+  // --------------------------------------------------
+
+  function filterAnalysisTable(type, button) {
+
+    const rows = document.querySelectorAll('.analysis-row');
+
+    rows.forEach(row => {
+
+      const rowType = row.dataset.columnType;
+
+      if (type === 'all' || rowType === type) {
+
+        row.style.display = '';
+
+      } else {
+
+        row.style.display = 'none';
+
+      }
+
+    });
+
+
+    // Reset all filter buttons
+
+    document.querySelectorAll('.analysis-filter').forEach(btn => {
+
+      btn.classList.remove(
+        'bg-primary-container',
+        'text-on-primary-container',
+        'font-medium'
+      );
+
+      btn.classList.add(
+        'text-on-surface-variant'
+      );
+
+    });
+
+
+    // Activate selected filter
+
+    button.classList.remove(
+      'text-on-surface-variant'
+    );
+
+    button.classList.add(
+      'bg-primary-container',
+      'text-on-primary-container',
+      'font-medium'
+    );
+
   }
 </script></main></div></body></html>

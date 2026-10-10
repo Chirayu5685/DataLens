@@ -55,11 +55,18 @@
     <div class="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-container-high transition-colors">
 
         <!-- Avatar -->
-        <div class="h-10 w-10 shrink-0 rounded-full bg-primary-container flex items-center justify-center">
-            <span class="font-semibold text-on-primary-container">
-                {{ request.user.first_name|default:request.user.username|slice:":1"|upper }}
-            </span>
-        </div>
+<div class="h-10 w-10 shrink-0 rounded-full bg-primary-container flex items-center justify-center">
+    <span class="font-semibold text-on-primary-container uppercase">
+        {% if request.user.first_name %}
+            {{ request.user.first_name|slice:":1" }}
+            {% if request.user.last_name %}
+                {{ request.user.last_name|slice:":1" }}
+            {% endif %}
+        {% else %}
+            {{ request.user.username|slice:":1" }}
+        {% endif %}
+    </span>
+</div>
 
         <!-- User Information -->
         <div class="min-w-0 flex-1">
@@ -74,17 +81,16 @@
 
         </div>
 
-        <!-- More Icon -->
-        <button
-            type="button"
-            class="shrink-0 p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-            title="Account">
-
-            <span class="material-symbols-outlined text-lg">
-                more_vert
-            </span>
-
-        </button>
+       <!-- Logout Button -->
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit"
+        class="shrink-0 p-1 rounded-lg text-on-surface-variant hover:text-red-400 hover:bg-surface-container transition-colors"
+        title="Logout"
+        aria-label="Logout">
+        <span class="material-symbols-outlined text-lg">logout</span>
+    </button>
+</form>
 
     </div>
 
